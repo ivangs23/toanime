@@ -55,14 +55,37 @@ main{display:grid;gap:18px;padding:8px 0 30px}
 .vacio{display:none;text-align:center;color:#fff;font-weight:800;padding:20px}
 footer{color:rgba(255,255,255,.7);font-size:12.5px;text-align:center;padding:0 0 32px}
 footer a{color:var(--amarillo)}
+/* Tablet */
+@media (min-width:700px){
+ .wrap{max-width:1000px;padding:0 28px}
+ header{margin:0 -28px;padding:26px 28px 10px;display:grid;grid-template-columns:1fr minmax(300px,46%);grid-template-rows:auto 1fr;column-gap:20px;align-items:end}
+ .top{grid-column:1/-1}
+ h1{font-size:clamp(56px,8vw,84px);align-self:center;padding:0}
+ .hero{grid-column:2;grid-row:2/3;margin-top:6px}
+ .hero img{width:48%;max-width:230px}
+ .bocadillo{font-size:16px;margin-bottom:34%}
+ .rayos{inset:-40px -100px auto 30%;height:560px}
+ .filtros{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin:22px 0 8px}
+ .buscar{flex:1 1 320px;max-width:460px;margin:0}
+ .chips{padding:4px 2px}
+ main{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 22px;padding-top:18px}
+ footer{max-width:640px;margin:0 auto}
+}
+/* PC */
+@media (min-width:1080px){
+ .wrap{max-width:1240px}
+ main{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 26px}
+ .hero img{max-width:260px}
+ .bocadillo{font-size:17px;padding:14px 18px}
+}
 </style></head><body><div class="wrap">
 <header><div class="rayos"></div>
 <div class="top"><img src="logo.jpg" alt="ToAnime"><a href="https://www.instagram.com/to_.anime._/">@to_.anime._</a></div>
 <h1>LO DE CADA VÍDEO<span>en un solo sitio</span></h1>
 <div class="hero"><img src="toanime.png" alt="ToAnime" width="416" height="520"><div class="bocadillo">¡Ey! Aquí tienes el manga, la figura o el <b>experimento</b> de cada vídeo. Busca el tuyo 👇</div></div>
 </header>
-<div class="buscar"><input id="q" type="search" placeholder="Busca: Luffy, Chidori, Goku..." autocomplete="off"></div>
-<div class="chips"><button class="on" data-f="">Todo</button><button data-f="manga">📖 Manga</button><button data-f="figuras">🧸 Figuras</button><button data-f="ciencia">🧪 Ciencia en casa</button></div>
+<div class="filtros"><div class="buscar"><input id="q" type="search" placeholder="Busca: Luffy, Chidori, Goku..." autocomplete="off"></div>
+<div class="chips"><button class="on" data-f="">Todo</button><button data-f="manga">📖 Manga</button><button data-f="figuras">🧸 Figuras</button><button data-f="ciencia">🧪 Ciencia en casa</button></div></div>
 <main>
 <a class="c" data-cat="manga" href="https://www.amazon.es/dp/8413418496?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="ahora mismo, sin moverte, sueltas tanta energía como una bombilla. dragon ball ultimate nº 01">
 <span class="nuevo">¡NUEVO!</span><div class="f"><img src="img/2026-11-13-genkidama.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Ahora mismo, sin moverte, sueltas tanta energía como una bombilla.</p><p class="p">Dragon Ball Ultimate nº 01</p><span class="b">¡LO QUIERO! →</span></div></a>
