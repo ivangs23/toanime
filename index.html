@@ -1,33 +1,56 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ToAnime · Lo de cada vídeo</title><meta name="description" content="El manga, la figura o el experimento de cada vídeo de ToAnime.">
+<title>ToAnime · La ciencia de verdad detrás del anime</title><meta name="description" content="Vídeos cortos sobre la ciencia real de lo que hacen los personajes de anime, y el manga, la figura o el experimento de cada vídeo.">
 <meta name="theme-color" content="#16213e"><link rel="icon" href="logo.jpg">
+<meta property="og:title" content="ToAnime"><meta property="og:description" content="La ciencia de verdad detrás del anime."><meta property="og:image" content="https://toanime.es/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--azul:#16213e;--azul2:#1f2d55;--amarillo:#ffc400;--tinta:#111;--papel:#fffaf0;--rojo:#e63946;--lila:#7b5cff}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;overflow-x:hidden}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;overflow-x:hidden;scroll-behavior:smooth;scroll-padding-top:70px}
 body{margin:0;color:var(--tinta);font:16px/1.35 Nunito,system-ui,sans-serif;background:var(--azul);
  background-image:radial-gradient(rgba(255,255,255,.07) 1.6px,transparent 1.7px);background-size:14px 14px;overflow-x:hidden}
 .wrap{max-width:560px;margin:0 auto;padding:0 16px}
-header{position:relative;padding:18px 0 6px;color:#fff;overflow-x:clip;overflow-y:visible;margin:0 -16px;padding-left:16px;padding-right:16px}
+/* Barra */
+nav{position:sticky;top:0;z-index:20;background:rgba(22,33,62,.94);backdrop-filter:blur(6px);border-bottom:3px solid var(--tinta)}
+nav .wrap{display:flex;align-items:center;gap:10px;height:58px}
+nav .logo{flex:none;display:flex}
+nav .logo img{width:40px;height:40px;border-radius:10px;border:2.5px solid var(--tinta);box-shadow:2px 2px 0 var(--tinta);transform:rotate(-6deg)}
+nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto;scrollbar-width:none}nav ul::-webkit-scrollbar{display:none}
+nav ul a{display:block;white-space:nowrap;font:900 13.5px Nunito,sans-serif;color:#fff;text-decoration:none;padding:7px 9px;border-radius:9px}
+nav ul i{font-style:normal}@media(max-width:439px){nav ul i{display:none}nav ul a{padding:7px 8px;font-size:14px}}
+nav ul a:hover,nav ul a.on{background:var(--amarillo);color:var(--tinta)}
+/* Portada */
+header{position:relative;padding:14px 0 6px;color:#fff;overflow-x:clip;margin:0 -16px;padding-left:16px;padding-right:16px}
 .rayos{position:absolute;inset:-40px -200px auto;height:420px;z-index:0;opacity:.35;
  background:repeating-conic-gradient(from 0deg at 50% 62%,rgba(255,196,0,.55) 0 6deg,transparent 6deg 18deg);
  -webkit-mask:radial-gradient(circle at 50% 62%,#000 0 30%,transparent 62%);mask:radial-gradient(circle at 50% 62%,#000 0 30%,transparent 62%)}
-.top{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between}
-.top img{width:64px;height:64px;border-radius:14px;border:3px solid var(--tinta);box-shadow:3px 3px 0 var(--tinta);transform:rotate(-6deg)}
-.top a{font-family:Bangers,Impact,sans-serif;letter-spacing:1px;font-size:18px;color:var(--tinta);background:var(--amarillo);border:3px solid var(--tinta);
- padding:4px 12px;border-radius:10px;box-shadow:3px 3px 0 var(--tinta);text-decoration:none;transform:rotate(3deg)}
-.hero{position:relative;z-index:1;display:flex;align-items:flex-end;gap:4px;margin-top:4px}
+.intro{position:relative;z-index:2}
+h1{font-family:Bangers,Impact,sans-serif;font-weight:400;letter-spacing:2px;line-height:.9;font-size:clamp(58px,19vw,86px);
+ margin:0;padding:8px 0 0;color:var(--amarillo);-webkit-text-stroke:3px var(--tinta);paint-order:stroke fill;text-shadow:5px 5px 0 var(--tinta);transform:rotate(-2deg)}
+.lema{margin:10px 0 0;font-weight:900;font-size:18px;line-height:1.2}
+.lema b{color:var(--amarillo)}
+.redes{display:flex;gap:10px;margin:14px 0 0}
+.red{display:grid;place-items:center;width:46px;height:46px;border:3px solid var(--tinta);border-radius:12px;box-shadow:3px 3px 0 var(--tinta);color:#fff;transition:transform .12s}
+.red svg{width:24px;height:24px}
+.red:hover{transform:translate(-2px,-2px)}
+.yt{background:#ff0033}.tt{background:#111;color:#fff}.tt svg{filter:drop-shadow(1.5px 1px 0 #ff0050) drop-shadow(-1.5px -1px 0 #00f2ea)}
+.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0,#fd5949 45%,#d6249f 60%,#285aeb 90%)}
+.hero{position:relative;z-index:1;display:flex;align-items:flex-end;gap:4px;margin-top:8px}
 .hero img{width:40%;max-width:190px;height:auto;flex:none;filter:drop-shadow(4px 4px 0 rgba(0,0,0,.45));margin-bottom:-6px}
-.bocadillo{position:relative;background:#fff;color:var(--tinta);border:3px solid var(--tinta);border-radius:22px;padding:12px 14px;margin-bottom:28%;
+.bocadillo{position:relative;background:#fff;color:var(--tinta);border:3px solid var(--tinta);border-radius:22px;padding:12px 14px;margin-bottom:22%;
  box-shadow:4px 4px 0 var(--tinta);font-weight:800;font-size:15px;transform:rotate(-2deg)}
 .bocadillo:after{content:"";position:absolute;left:-17px;bottom:16px;border:9px solid transparent;border-right:14px solid var(--tinta)}
 .bocadillo:before{content:"";position:absolute;left:-10px;bottom:19px;border:6px solid transparent;border-right:10px solid #fff;z-index:1}
 .bocadillo b{color:var(--rojo)}
-h1{position:relative;z-index:2;font-family:Bangers,Impact,sans-serif;font-weight:400;letter-spacing:1.5px;line-height:.95;font-size:clamp(40px,12vw,58px);
- margin:0;padding:10px 0 0;color:var(--amarillo);-webkit-text-stroke:2.5px var(--tinta);paint-order:stroke fill;text-shadow:4px 4px 0 var(--tinta);transform:rotate(-2deg)}
-h1 span{display:block;color:#fff;font-size:.62em}
-.buscar{position:relative;margin:18px 0 10px}
+.bocadillo a{display:inline-block;margin-top:8px;font-family:Bangers,Impact,sans-serif;letter-spacing:1px;font-size:18px;color:var(--tinta);background:var(--amarillo);
+ border:3px solid var(--tinta);border-radius:10px;padding:3px 10px 1px;box-shadow:3px 3px 0 var(--tinta);text-decoration:none}
+/* Secciones */
+section{padding:34px 0 6px}
+h2{font-family:Bangers,Impact,sans-serif;font-weight:400;letter-spacing:1.5px;font-size:clamp(34px,10vw,48px);line-height:1;margin:0 0 4px;color:var(--amarillo);
+ -webkit-text-stroke:2px var(--tinta);paint-order:stroke fill;text-shadow:3px 3px 0 var(--tinta);transform:rotate(-1.5deg);transform-origin:left}
+.sub{color:#fff;font-weight:800;margin:0 0 14px;opacity:.9}
+/* Tienda */
+.buscar{position:relative;margin:4px 0 10px}
 .buscar input{width:100%;padding:13px 14px 13px 44px;font:800 16px Nunito,sans-serif;border:3px solid var(--tinta);border-radius:14px;background:var(--papel);
  box-shadow:4px 4px 0 var(--tinta);outline:none}
 .buscar:before{content:"🔍";position:absolute;left:14px;top:50%;transform:translateY(-50%)}
@@ -35,172 +58,359 @@ h1 span{display:block;color:#fff;font-size:.62em}
 .chips button{flex:none;font:900 14px Nunito,sans-serif;padding:7px 12px;border:3px solid var(--tinta);border-radius:999px;background:#fff;
  box-shadow:2px 2px 0 var(--tinta);cursor:pointer;color:var(--tinta)}
 .chips button.on{background:var(--amarillo);transform:translateY(-1px)}
-main{display:grid;gap:18px;padding:8px 0 30px}
+.rejilla{display:grid;gap:18px;padding:8px 0 10px}
 .c{position:relative;display:flex;gap:12px;background:var(--papel);border:3px solid var(--tinta);border-radius:6px;box-shadow:6px 6px 0 var(--tinta);
- padding:8px;color:inherit;text-decoration:none;transition:transform .12s,box-shadow .12s}
+ padding:8px;transition:transform .12s,box-shadow .12s}
 .c:nth-child(odd){transform:rotate(-.8deg)}.c:nth-child(even){transform:rotate(.7deg)}
-.c:active{transform:translate(4px,4px) rotate(0);box-shadow:2px 2px 0 var(--tinta)}
 @media(hover:hover){.c:hover{transform:translate(-2px,-2px) rotate(0);box-shadow:8px 8px 0 var(--tinta)}}
 .f{flex:none;width:98px;border:3px solid var(--tinta);border-radius:3px;overflow:hidden;background:#000}
 .f img{display:block;width:100%;height:174px;object-fit:cover}
-.t{display:flex;flex-direction:column;gap:6px;min-width:0;padding:2px 2px 2px 0}
+.t{display:flex;flex-direction:column;gap:6px;min-width:0;padding:2px 2px 2px 0;flex:1}
 .cat{align-self:flex-start;font:900 11px Nunito,sans-serif;text-transform:uppercase;letter-spacing:.5px;background:var(--azul);color:#fff;padding:3px 8px;border-radius:5px}
 .c[data-cat=manga] .cat{background:var(--rojo)}.c[data-cat=ciencia] .cat{background:var(--lila)}
 .g{margin:0;font-weight:900;font-size:15px;line-height:1.25}
 .p{margin:0;font-weight:700;font-size:13.5px;color:#4a4a55}
-.b{margin-top:auto;align-self:flex-start;font-family:Bangers,Impact,sans-serif;letter-spacing:1px;font-size:19px;background:var(--amarillo);
+.acc{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.b{font-family:Bangers,Impact,sans-serif;letter-spacing:1px;font-size:19px;background:var(--amarillo);color:var(--tinta);text-decoration:none;
  border:3px solid var(--tinta);border-radius:10px;padding:4px 12px 2px;box-shadow:3px 3px 0 var(--tinta)}
+.b:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--tinta)}
+.v{font:900 13px Nunito,sans-serif;color:var(--tinta);text-decoration:none;border-bottom:2px solid var(--rojo)}
 .nuevo{position:absolute;top:-14px;right:-8px;z-index:2;font-family:Bangers,Impact,sans-serif;letter-spacing:1px;font-size:18px;color:#fff;background:var(--rojo);
  border:3px solid var(--tinta);padding:3px 10px 1px;border-radius:8px;transform:rotate(8deg);box-shadow:3px 3px 0 var(--tinta)}
+.todos{display:block;margin:8px auto 0;font-family:Bangers,Impact,sans-serif;letter-spacing:1px;font-size:22px;color:var(--tinta);background:var(--amarillo);
+ border:3px solid var(--tinta);border-radius:12px;padding:8px 20px 5px;box-shadow:4px 4px 0 var(--tinta);cursor:pointer}
 .vacio{display:none;text-align:center;color:#fff;font-weight:800;padding:20px}
-footer{color:rgba(255,255,255,.7);font-size:12.5px;text-align:center;padding:0 0 32px}
+/* Vídeos */
+.tira{display:grid;grid-auto-flow:column;grid-auto-columns:42%;gap:14px;overflow-x:auto;padding:6px 4px 16px;margin:0 -16px;padding-left:16px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.tira::-webkit-scrollbar{display:none}
+.vid{position:relative;display:block;scroll-snap-align:start;border:3px solid var(--tinta);border-radius:8px;overflow:hidden;box-shadow:5px 5px 0 var(--tinta);background:#000;color:#fff;text-decoration:none}
+.vid img{display:block;width:100%;aspect-ratio:9/16;height:auto;object-fit:cover;transition:transform .2s}
+.vid:hover img{transform:scale(1.04)}
+.vg{position:absolute;left:0;right:0;bottom:0;padding:30px 8px 8px;font-weight:900;font-size:12.5px;line-height:1.2;background:linear-gradient(transparent,rgba(0,0,0,.85))}
+.play{position:absolute;top:8px;left:8px;z-index:1;width:30px;height:30px;display:grid;place-items:center;font-size:13px;background:var(--rojo);border:2.5px solid var(--tinta);border-radius:50%}
+.mas{display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-family:Bangers,Impact,sans-serif;letter-spacing:1px;font-size:20px;color:#fff;background:#ff0033;
+ border:3px solid var(--tinta);border-radius:10px;padding:5px 14px 3px;box-shadow:3px 3px 0 var(--tinta);text-decoration:none}
+.mas svg{width:22px;height:22px}
+/* Redes */
+.rcs{display:grid;gap:14px}
+.rc{display:flex;align-items:center;gap:14px;padding:14px;border:3px solid var(--tinta);border-radius:14px;box-shadow:5px 5px 0 var(--tinta);color:#fff;text-decoration:none;transition:transform .12s}
+.rc:hover{transform:translate(-2px,-2px)}
+.ri svg{width:38px;height:38px;display:block}
+.rt{display:flex;flex-direction:column;min-width:0}.rt b{font-family:Bangers,Impact,sans-serif;font-weight:400;letter-spacing:1px;font-size:26px;line-height:1}
+.rt span{font-weight:800;opacity:.9}
+.rb{margin-left:auto;flex:none;font:900 14px Nunito,sans-serif;background:#fff;color:var(--tinta);border:2.5px solid var(--tinta);border-radius:999px;padding:6px 12px}
+/* Sobre */
+.panel{background:var(--papel);border:3px solid var(--tinta);border-radius:6px;box-shadow:6px 6px 0 var(--tinta);padding:18px;transform:rotate(-.5deg)}
+.panel p{margin:0 0 12px;font-weight:700}
+.vinetas{display:grid;gap:10px;margin:14px 0}
+.vinetas div{display:flex;gap:10px;align-items:flex-start;background:#fff;border:2.5px solid var(--tinta);border-radius:10px;padding:10px;font-weight:800;font-size:14.5px}
+.vinetas span{font-size:22px;line-height:1}
+.pide{margin:0;background:var(--amarillo);border:3px solid var(--tinta);border-radius:12px;padding:12px;font-weight:900}
+footer{color:rgba(255,255,255,.75);font-size:12.5px;text-align:center;padding:36px 0 32px}
+footer .redes{justify-content:center;margin:0 0 14px}
 footer a{color:var(--amarillo)}
 /* Tablet */
 @media (min-width:700px){
  .wrap{max-width:1000px;padding:0 28px}
- header{margin:0 -28px;padding:26px 28px 10px;display:grid;grid-template-columns:1fr minmax(300px,46%);grid-template-rows:auto 1fr;column-gap:20px;align-items:end}
- .top{grid-column:1/-1}
- h1{font-size:clamp(56px,8vw,84px);align-self:center;padding:0}
- .hero{grid-column:2;grid-row:2/3;margin-top:6px}
+ nav .wrap{height:64px}nav ul a{font-size:15px;padding:8px 12px}
+ header{margin:0 -28px;padding:26px 28px 10px;display:grid;grid-template-columns:1fr minmax(300px,46%);column-gap:20px;align-items:end}
+ .intro{align-self:center}
+ h1{font-size:clamp(90px,13vw,130px)}
+ .lema{font-size:21px;max-width:420px}
+ .hero{margin-top:6px}
  .hero img{width:48%;max-width:230px}
- .bocadillo{font-size:16px;margin-bottom:34%}
+ .bocadillo{font-size:16px;margin-bottom:30%}
  .rayos{inset:-40px -100px auto 30%;height:560px}
- .filtros{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin:22px 0 8px}
+ .filtros{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin:4px 0 8px}
  .buscar{flex:1 1 320px;max-width:460px;margin:0}
  .chips{padding:4px 2px}
- main{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 22px;padding-top:18px}
+ .rejilla{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 22px;padding-top:18px}
+ .tira{grid-auto-columns:23%;margin:0;padding-left:4px}
+ .rcs{grid-template-columns:repeat(3,1fr)}
+ .rc{flex-direction:column;text-align:center;padding:22px 14px}.rb{margin:6px 0 0}
+ .vinetas{grid-template-columns:repeat(3,1fr)}
+ .panel{padding:26px}
  footer{max-width:640px;margin:0 auto}
 }
 /* PC */
 @media (min-width:1080px){
  .wrap{max-width:1240px}
- main{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 26px}
+ .rejilla{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 26px}
+ .tira{grid-auto-flow:row;grid-template-columns:repeat(5,1fr);overflow:visible}
  .hero img{max-width:260px}
  .bocadillo{font-size:17px;padding:14px 18px}
 }
-</style></head><body><div class="wrap">
-<header><div class="rayos"></div>
-<div class="top"><img src="logo.jpg" alt="ToAnime"><a href="https://www.instagram.com/to_.anime._/">@to_.anime._</a></div>
-<h1>LO DE CADA VÍDEO<span>en un solo sitio</span></h1>
-<div class="hero"><img src="toanime.png" alt="ToAnime" width="416" height="520"><div class="bocadillo">¡Ey! Aquí tienes el manga, la figura o el <b>experimento</b> de cada vídeo. Busca el tuyo 👇</div></div>
+</style></head><body>
+<nav><div class="wrap"><a class="logo" href="#inicio"><img src="logo.jpg" alt="ToAnime"></a>
+<ul><li><a href="#tienda"><i>🛒 </i>Tienda</a></li><li><a href="#videos"><i>▶ </i>Vídeos</a></li><li><a href="#redes"><i>📲 </i>Redes</a></li><li><a href="#sobre"><i>⚡ </i>Sobre mí</a></li></ul></div></nav>
+<div class="wrap">
+<header id="inicio"><div class="rayos"></div>
+<div class="intro"><h1>TOANIME</h1><p class="lema">La ciencia <b>de verdad</b> detrás del anime, en menos de un minuto.</p><div class="redes"><a class="red yt" href="https://www.youtube.com/@To_Anime-1" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15V9l5.8 3z"/></svg></a><a class="red tt" href="https://www.tiktok.com/@to_anime._" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.4v13.3a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.1a6.3 6.3 0 1 0 5.4 6.2V8.6a8 8 0 0 0 4.7 1.5V6.7a4.7 4.7 0 0 1-4.7-4.7z"/></svg></a><a class="red ig" href="https://www.instagram.com/to_.anime._/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg></a></div></div>
+<div class="hero"><img src="toanime.png" alt="ToAnime" width="416" height="520"><div class="bocadillo">¡Ey! Aquí tienes el manga, la figura o el <b>experimento</b> de cada vídeo 👇<br><a href="#tienda">VER LA TIENDA</a></div></div>
 </header>
+
+<section id="tienda"><h2>LO DE CADA VÍDEO</h2><p class="sub">El manga, la figura o el experimento del que hablo. Busca el tuyo.</p>
 <div class="filtros"><div class="buscar"><input id="q" type="search" placeholder="Busca: Luffy, Chidori, Goku..." autocomplete="off"></div>
 <div class="chips"><button class="on" data-f="">Todo</button><button data-f="manga">📖 Manga</button><button data-f="figuras">🧸 Figuras</button><button data-f="ciencia">🧪 Ciencia en casa</button></div></div>
-<main>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="tu estómago se estira como el de luffy: lo que te frena es el cerebro. one piece nº 01">
-<span class="nuevo">¡NUEVO!</span><div class="f"><img src="img/2026-11-13-comer-como-luffy.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Tu estómago se estira como el de Luffy: lo que te frena es el cerebro.</p><p class="p">One Piece nº 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8413418496?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="ahora mismo, sin moverte, sueltas tanta energía como una bombilla. dragon ball ultimate nº 01">
-<div class="f"><img src="img/2026-11-13-genkidama.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Ahora mismo, sin moverte, sueltas tanta energía como una bombilla.</p><p class="p">Dragon Ball Ultimate nº 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B0CLFNMTMV?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="¿puedes meter a alguien en un genjutsu como itachi? con una mano de goma y dos pinceles, sí. funko itachi uchiha">
-<div class="f"><img src="img/2026-11-13-genjutsu-itachi.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">¿Puedes meter a alguien en un genjutsu como Itachi? Con una mano de goma y dos pinceles, sí.</p><p class="p">Funko Itachi Uchiha</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B0CSVK84MR?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="mete la cara en agua fría y tu corazón late más despacio: es tu propio modo agua. funko tanjiro">
-<div class="f"><img src="img/2026-11-12-respiracion-del-agua.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">Mete la cara en agua fría y tu corazón late más despacio: es tu propio modo agua.</p><p class="p">Funko Tanjiro</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B0CFRQ1MQ4?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="frota un globo en tu pelo y cada pelo se aparta de los demás. no es magia: es la misma chispa del pomo. peluca super saiyan funidelia">
-<div class="f"><img src="img/2026-11-12-pelo-super-saiyan.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">Frota un globo en tu pelo y cada pelo se aparta de los demás. No es magia: es la misma chispa del pomo.</p><p class="p">Peluca Super Saiyan Funidelia</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="hay quien va en bici sin ver nada, guiándose solo por el eco de sus chasquidos. one piece nº 01">
-<div class="f"><img src="img/2026-11-11-haki-observacion.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Hay quien va en bici sin ver nada, guiándose solo por el eco de sus chasquidos.</p><p class="p">One Piece nº 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B0CVNM5L6F?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="tus huesos ya hacen el haki de armadura: se vuelven más gruesos justo donde les pegas. funko monkey d. luffy">
-<div class="f"><img src="img/2026-11-11-haki-de-armadura.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">Tus huesos ya hacen el Haki de armadura: se vuelven más gruesos justo donde les pegas.</p><p class="p">Funko Monkey D. Luffy</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8416604509?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="¿te quedarías calvo entrenando como saitama? las flexiones no tienen la culpa: el pelo se cae tres meses después del golpe. one punch-man 01">
-<div class="f"><img src="img/2026-11-10-saitama-calvo.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">¿Te quedarías calvo entrenando como Saitama? Las flexiones no tienen la culpa: el pelo se cae tres meses después del golpe.</p><p class="p">One Punch-Man 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B0CTTXV5HX?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="¿cabrías en una pokéball? sí, y sin encogerte: toda la humanidad cabe en un terrón de azúcar. pokémon clip 'n' go charmander y poké ball">
-<div class="f"><img src="img/2026-11-10-pokeball.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">¿Cabrías en una Pokéball? Sí, y sin encogerte: toda la humanidad cabe en un terrón de azúcar.</p><p class="p">Pokémon Clip 'N' Go Charmander y Poké Ball</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B0BDY764VM?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="¿quieres abrir las ocho puertas como gai? ya echas su vapor cada vez que entrenas con frío. funko might guy ocho puertas">
-<div class="f"><img src="img/2026-11-10-ocho-puertas.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">¿Quieres abrir las Ocho Puertas como Gai? Ya echas su vapor cada vez que entrenas con frío.</p><p class="p">Funko Might Guy Ocho Puertas</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8467961112?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="nunca has tocado tu móvil: tus átomos se frenan antes, como el infinito de gojo. jujutsu kaisen 01">
-<div class="f"><img src="img/2026-11-10-infinito-gojo.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Nunca has tocado tu móvil: tus átomos se frenan antes, como el Infinito de Gojo.</p><p class="p">Jujutsu Kaisen 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B08NGT99HG?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="¿correr como naruto te hace más rápido? lo midieron con cronómetro y la diferencia es ridícula. bandana de konoha">
-<div class="f"><img src="img/2026-11-10-correr-como-naruto.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">¿Correr como Naruto te hace más rápido? Lo midieron con cronómetro y la diferencia es ridícula.</p><p class="p">Bandana de Konoha</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="ciencia" href="https://www.amazon.es/dp/B089N5HXR9?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="¿quieres hacer un chidori como sasuke? ya lo haces cada vez que te quitas un jersey a oscuras. bola de plasma">
-<div class="f"><img src="img/2026-11-10-chidori.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">¿Quieres hacer un Chidori como Sasuke? Ya lo haces cada vez que te quitas un jersey a oscuras.</p><p class="p">Bola de plasma</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8416703892?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="mientras ves este reel te mueren casi 4 millones de células cada segundo, y no lo notas. cells at work! vol. 1">
-<div class="f"><img src="img/2026-11-10-celulas.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Mientras ves este reel te mueren casi 4 millones de células cada segundo, y no lo notas.</p><p class="p">Cells at Work! vol. 1</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8413418496?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="¿por qué en dragon ball gritan al transformarse? porque gritando aprietas un 7 % más fuerte, y tú ya lo haces. dragon ball ultimate nº 01">
-<div class="f"><img src="img/2026-11-10-avatar-grito.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">¿Por qué en Dragon Ball gritan al transformarse? Porque gritando aprietas un 7 % más fuerte, y tú ya lo haces.</p><p class="p">Dragon Ball Ultimate nº 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8416693501?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="hay una rana que se vuelve casi invisible al dormirse: esconde su sangre. my hero academia nº 01">
-<div class="f"><img src="img/2026-11-09-invisible-hagakure.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Hay una rana que se vuelve casi invisible al dormirse: esconde su sangre.</p><p class="p">My Hero Academia nº 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8467960965?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="nueve de cada diez personas a las que les cae un rayo sobreviven. guardianes de la noche 01">
-<div class="f"><img src="img/2026-11-08-zenitsu.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Nueve de cada diez personas a las que les cae un rayo sobreviven.</p><p class="p">Guardianes de la Noche 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B0H3KTZ32B?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="¿volver de la muerte, como en dragon ball? una mujer estuvo más de dos horas y media con el corazón parado, y volvió. set de las 7 bolas de dragón">
-<div class="f"><img src="img/2026-11-08-volver-de-la-muerte.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">¿Volver de la muerte, como en Dragon Ball? Una mujer estuvo más de dos horas y media con el corazón parado, y volvió.</p><p class="p">Set de las 7 Bolas de Dragón</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="ciencia" href="https://www.amazon.es/dp/B00XA2I7KU?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="el tekkai de lucci existe, y no es músculo ni metal: es un líquido que tienes en la cocina. maizena">
-<div class="f"><img src="img/2026-11-08-tekkai.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">El Tekkai de Lucci existe, y no es músculo ni metal: es un líquido que tienes en la cocina.</p><p class="p">Maizena</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="una pulga salta 100 veces lo que mide, y aun así tú saltas más alto que ella. naruto nº 01">
-<div class="f"><img src="img/2026-11-08-saltar.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Una pulga salta 100 veces lo que mide, y aun así tú saltas más alto que ella.</p><p class="p">Naruto nº 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="ciencia" href="https://www.amazon.es/dp/B08MCHT1FG?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="un científico hizo flotar una rana viva con un imán. años después ganó el nobel (por otra cosa). maceta bonsái que levita con imanes">
-<div class="f"><img src="img/2026-11-08-levitar-como-uraraka.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Un científico hizo flotar una rana viva con un imán. Años después ganó el Nobel (por otra cosa).</p><p class="p">Maceta bonsái que levita con imanes</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8491675892?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="goemon corta balas con la espada. alguien lo hizo de verdad, y no gracias a la espada. lupin iii 1">
-<div class="f"><img src="img/2026-11-08-katana-bala.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Goemon corta balas con la espada. Alguien lo hizo de verdad, y no gracias a la espada.</p><p class="p">Lupin III 1</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="¿romper algo con un grito, como luffy con el haki del rey? se puede, pero gritar más fuerte no sirve de nada. one piece nº 01">
-<div class="f"><img src="img/2026-11-08-grito-haki.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">¿Romper algo con un grito, como Luffy con el Haki del Rey? Se puede, pero gritar más fuerte no sirve de nada.</p><p class="p">One Piece nº 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B07C7ZWYRP?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="gohan se enfada y levanta lo imposible. y tú ya tienes esa fuerza: tu cerebro no te deja usarla. figura gohan bandai">
-<div class="f"><img src="img/2026-11-08-gohan-coche.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">Gohan se enfada y levanta lo imposible. Y tú ya tienes esa fuerza: tu cerebro no te deja usarla.</p><p class="p">Figura Gohan Bandai</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B0FG4XVFJJ?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="usain bolt llegó a 44,7 km/h, y la ciencia dice que podríamos pasar de 60. funko rock lee">
-<div class="f"><img src="img/2026-11-08-correr-como-rock-lee.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">Usain Bolt llegó a 44,7 km/h, y la ciencia dice que podríamos pasar de 60.</p><p class="p">Funko Rock Lee</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B0G2N796KG?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="aokiji congela el mar de un toque. y tú puedes hacerlo con una botella de agua, sin más frío. figura kuzan aokiji banpresto">
-<div class="f"><img src="img/2026-11-08-aokiji.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">Aokiji congela el mar de un toque. Y tú puedes hacerlo con una botella de agua, sin más frío.</p><p class="p">Figura Kuzan Aokiji Banpresto</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="tsunade parte rocas de un puñetazo. tu hueso aguanta más de 40 veces más que el hormigón, y aun así te romperías la mano. naruto nº 01">
-<div class="f"><img src="img/2026-11-07-tsunade.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Tsunade parte rocas de un puñetazo. Tu hueso aguanta más de 40 veces más que el hormigón, y aun así te romperías la mano.</p><p class="p">Naruto nº 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="naruto encierra aire girando en su mano. un anillo de aire que gira apaga velas a metros. naruto nº 01">
-<div class="f"><img src="img/2026-11-07-rasengan.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Naruto encierra aire girando en su mano. Un anillo de aire que gira apaga velas a metros.</p><p class="p">Naruto nº 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B0DJRZ1QNX?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="sasuke escupe fuego. los tragafuegos de verdad no lo sacan de la boca: el fuego nace en la antorcha. funko sasuke uchiha (naruto classic)">
-<div class="f"><img src="img/2026-11-07-katon.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">Sasuke escupe fuego. Los tragafuegos de verdad no lo sacan de la boca: el fuego nace en la antorcha.</p><p class="p">Funko Sasuke Uchiha (Naruto Classic)</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B08LQ591C3?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="goku junta energía en las manos. la física sabe hacerlo: se llama plasma. funko goku con onda kamehameha">
-<div class="f"><img src="img/2026-11-07-kamehameha.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">Goku junta energía en las manos. La física sabe hacerlo: se llama plasma.</p><p class="p">Funko Goku con onda Kamehameha</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8491874801?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="un golpe flojo en el pecho puede parar un corazón, si cae en 15 milésimas exactas. el cuerpo humano, bill bryson">
-<div class="f"><img src="img/2026-11-07-golpe-corazon.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Un golpe flojo en el pecho puede parar un corazón, si cae en 15 milésimas exactas.</p><p class="p">El cuerpo humano, Bill Bryson</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="ciencia" href="https://www.amazon.es/dp/B07QB3FLPZ?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="luffy bombea sangre con las piernas. tu cuerpo también: tus gemelos son tu segundo corazón. calcetines de compresión danish endurance">
-<div class="f"><img src="img/2026-11-07-gear-second.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Luffy bombea sangre con las piernas. Tu cuerpo también: tus gemelos son tu segundo corazón.</p><p class="p">Calcetines de compresión Danish Endurance</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="neji ve a través de las paredes. con partículas que caen del cielo encontraron un hueco escondido en la gran pirámide. naruto nº 01">
-<div class="f"><img src="img/2026-11-07-byakugan.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Neji ve a través de las paredes. Con partículas que caen del cielo encontraron un hueco escondido en la Gran Pirámide.</p><p class="p">Naruto nº 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B08FMSC7NC?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="zoro corta acero de un tajo. tu katana rebotaría, y no porque el acero sea más duro. funko roronoa zoro">
-<div class="f"><img src="img/2026-11-06-zoro.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">Zoro corta acero de un tajo. Tu katana rebotaría, y no porque el acero sea más duro.</p><p class="p">Funko Roronoa Zoro</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B0CLFNMTMV?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="una mosca ve 250 imágenes por segundo. tú, 60: para ella, tu mano va a cámara lenta. funko itachi uchiha">
-<div class="f"><img src="img/2026-11-06-sharingan.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">Una mosca ve 250 imágenes por segundo. Tú, 60: para ella, tu mano va a cámara lenta.</p><p class="p">Funko Itachi Uchiha</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B0D3KTT41G?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="piccolo se regenera un brazo. tú no, pero tienes un órgano que vuelve a crecer aunque te quiten más de la mitad. figura piccolo tamashii daima">
-<div class="f"><img src="img/2026-11-06-piccolo.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">Piccolo se regenera un brazo. Tú no, pero tienes un órgano que vuelve a crecer aunque te quiten más de la mitad.</p><p class="p">Figura Piccolo Tamashii DAIMA</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8417099417?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="zeppeli rompe una roca a través de una rana sin hacerle nada. los médicos lo hacen cada día. jojo's bizarre adventure parte 1">
-<div class="f"><img src="img/2026-11-06-hamon.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Zeppeli rompe una roca a través de una rana sin hacerle nada. Los médicos lo hacen cada día.</p><p class="p">JoJo's Bizarre Adventure parte 1</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="ciencia" href="https://www.amazon.es/dp/B08R39Y1H4?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="tanjiro sopla calabazas para tener más fuerza. tu sangre ya va al 98 % de oxígeno. pulsioxímetro de dedo">
-<div class="f"><img src="img/2026-11-05-respirar.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Tanjiro sopla calabazas para tener más fuerza. Tu sangre ya va al 98 % de oxígeno.</p><p class="p">Pulsioxímetro de dedo</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="ciencia" href="https://www.amazon.es/dp/B09CZ68WV3?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="lo que le pasa a tu cerebro si no duermes, día a día. antifaz para dormir myhalos">
-<div class="f"><img src="img/2026-11-04-sin-dormir.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Lo que le pasa a tu cerebro si no duermes, día a día.</p><p class="p">Antifaz para dormir MyHalos</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="ciencia" href="https://www.amazon.es/dp/B0DTY7F7Y3?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="existe una cueva con cristales de 11 metros, como en un mundo de fantasía. mega kit de cristales national geographic">
-<div class="f"><img src="img/2026-11-04-naica.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Existe una cueva con cristales de 11 metros, como en un mundo de fantasía.</p><p class="p">Mega kit de cristales National Geographic</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8403517297?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="una rana se congela cada invierno: el corazón se le para, y en primavera se va saltando. ¿qué pasaría si...?">
-<div class="f"><img src="img/2026-11-03-rana.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Una rana se congela cada invierno: el corazón se le para, y en primavera se va saltando.</p><p class="p">¿Qué pasaría si...?</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="hay un hombre que se estira la piel casi 16 cm, y no es por entrenar. one piece nº 01">
-<div class="f"><img src="img/2026-11-03-cuerpo-de-goma.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Hay un hombre que se estira la piel casi 16 cm, y no es por entrenar.</p><p class="p">One Piece nº 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="figuras" href="https://www.amazon.es/dp/B0F2N6DW8D?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="hay un animal al que le vuelve a crecer la pata entera, sin una sola cicatriz. peluche ajolote wild republic">
-<div class="f"><img src="img/2026-11-02-regenerarse.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧸 Figura</span><p class="g">Hay un animal al que le vuelve a crecer la pata entera, sin una sola cicatriz.</p><p class="p">Peluche ajolote Wild Republic</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="ciencia" href="https://www.amazon.es/dp/B089N5HXR9?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="tu cuerpo ya lo hace cuando te da calambre una puerta. bola de plasma">
-<div class="f"><img src="img/2026-11-02-rayo-con-las-manos.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Tu cuerpo ya lo hace cuando te da calambre una puerta.</p><p class="p">Bola de plasma</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8467963131?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="los alquimistas nunca lo lograron. la física, sí: plomo convertido en oro de verdad. fullmetal alchemist kanzenban 1">
-<div class="f"><img src="img/2026-11-02-oro.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Los alquimistas nunca lo lograron. La física, sí: plomo convertido en oro de verdad.</p><p class="p">Fullmetal Alchemist kanzenban 1</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8403517297?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="hay una velocidad a la que dejas de acelerar, saltes desde donde saltes. ¿qué pasaría si...?">
-<div class="f"><img src="img/2026-11-02-nubes.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Hay una velocidad a la que dejas de acelerar, saltes desde donde saltes.</p><p class="p">¿Qué pasaría si...?</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="ciencia" href="https://www.amazon.es/dp/B0DC6V7HKF?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="hay una medusa que, cuando envejece, vuelve a ser joven. lámpara de medusas led">
-<div class="f"><img src="img/2026-11-02-medusa.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Hay una medusa que, cuando envejece, vuelve a ser joven.</p><p class="p">Lámpara de medusas LED</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="ciencia" href="https://www.amazon.es/dp/B0DQ17RC2R?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="el agua corta acero. solo hay que dispararla el doble de rápido que una bala. kärcher k2 hidrolimpiadora">
-<div class="f"><img src="img/2026-11-02-agua-corta-acero.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">El agua corta acero. Solo hay que dispararla el doble de rápido que una bala.</p><p class="p">Kärcher K2 hidrolimpiadora</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8467964146?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="un humano de 15 metros no daría miedo: se rompería con su propio peso. ataque a los titanes, ed. integral 1">
-<div class="f"><img src="img/2026-10-31-titanes.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Un humano de 15 metros no daría miedo: se rompería con su propio peso.</p><p class="p">Ataque a los Titanes, ed. integral 1</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="naruto lo hace con chakra. un lagarto lo hace corriendo. naruto nº 01">
-<div class="f"><img src="img/2026-10-31-agua.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Naruto lo hace con chakra. Un lagarto lo hace corriendo.</p><p class="p">Naruto nº 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8467961198?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="¿los tréboles de cinco hojas de black clover existen de verdad? sí, y hay uno con 63. black clover 01">
-<div class="f"><img src="img/2026-10-30-trebol.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">¿Los tréboles de cinco hojas de Black Clover existen de verdad? Sí, y hay uno con 63.</p><p class="p">Black Clover 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="manga" href="https://www.amazon.es/dp/8416604509?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="saitama lo hace en cada capítulo. en la vida real, solo un látigo lo consigue. one punch-man 01">
-<div class="f"><img src="img/2026-10-30-punetazo.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">📖 Manga</span><p class="g">Saitama lo hace en cada capítulo. En la vida real, solo un látigo lo consigue.</p><p class="p">One Punch-Man 01</p><span class="b">¡LO QUIERO! →</span></div></a>
-<a class="c" data-cat="ciencia" href="https://www.amazon.es/dp/B09QXGQNFC?tag=toanime-21" target="_blank" rel="sponsored noopener" data-q="goku entrenaba a 100 veces la gravedad. tú no aguantarías ni unos segundos (y no por los músculos). chaleco lastrado proiron 10 kg">
-<div class="f"><img src="img/2026-10-30-gravedad.jpg" alt="" loading="lazy" width="240" height="427"></div><div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Goku entrenaba a 100 veces la gravedad. Tú no aguantarías ni unos segundos (y no por los músculos).</p><p class="p">Chaleco lastrado PROIRON 10 kg</p><span class="b">¡LO QUIERO! →</span></div></a>
-</main>
+<div class="rejilla">
+<article class="c" data-cat="manga" data-q="tu estómago se estira como el de luffy: lo que te frena es el cerebro. one piece nº 01"><span class="nuevo">¡NUEVO!</span>
+<a class="f" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-13-comer-como-luffy.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Tu estómago se estira como el de Luffy: lo que te frena es el cerebro.</p><p class="p">One Piece nº 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="manga" data-q="ahora mismo, sin moverte, sueltas tanta energía como una bombilla. dragon ball ultimate nº 01">
+<a class="f" href="https://www.amazon.es/dp/8413418496?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-13-genkidama.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Ahora mismo, sin moverte, sueltas tanta energía como una bombilla.</p><p class="p">Dragon Ball Ultimate nº 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8413418496?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="¿puedes meter a alguien en un genjutsu como itachi? con una mano de goma y dos pinceles, sí. funko itachi uchiha">
+<a class="f" href="https://www.amazon.es/dp/B0CLFNMTMV?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-13-genjutsu-itachi.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">¿Puedes meter a alguien en un genjutsu como Itachi? Con una mano de goma y dos pinceles, sí.</p><p class="p">Funko Itachi Uchiha</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CLFNMTMV?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="mete la cara en agua fría y tu corazón late más despacio: es tu propio modo agua. funko tanjiro">
+<a class="f" href="https://www.amazon.es/dp/B0CSVK84MR?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-12-respiracion-del-agua.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">Mete la cara en agua fría y tu corazón late más despacio: es tu propio modo agua.</p><p class="p">Funko Tanjiro</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CSVK84MR?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/4Uk1amLIWBo" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="frota un globo en tu pelo y cada pelo se aparta de los demás. no es magia: es la misma chispa del pomo. peluca super saiyan funidelia">
+<a class="f" href="https://www.amazon.es/dp/B0CFRQ1MQ4?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-12-pelo-super-saiyan.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">Frota un globo en tu pelo y cada pelo se aparta de los demás. No es magia: es la misma chispa del pomo.</p><p class="p">Peluca Super Saiyan Funidelia</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CFRQ1MQ4?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/Ai4RUQ_Hu6o" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="hay quien va en bici sin ver nada, guiándose solo por el eco de sus chasquidos. one piece nº 01">
+<a class="f" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-11-haki-observacion.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Hay quien va en bici sin ver nada, guiándose solo por el eco de sus chasquidos.</p><p class="p">One Piece nº 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/CDooXK6JpDI" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="tus huesos ya hacen el haki de armadura: se vuelven más gruesos justo donde les pegas. funko monkey d. luffy">
+<a class="f" href="https://www.amazon.es/dp/B0CVNM5L6F?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-11-haki-de-armadura.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">Tus huesos ya hacen el Haki de armadura: se vuelven más gruesos justo donde les pegas.</p><p class="p">Funko Monkey D. Luffy</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CVNM5L6F?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="manga" data-q="¿te quedarías calvo entrenando como saitama? las flexiones no tienen la culpa: el pelo se cae tres meses después del golpe. one punch-man 01">
+<a class="f" href="https://www.amazon.es/dp/8416604509?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-10-saitama-calvo.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">¿Te quedarías calvo entrenando como Saitama? Las flexiones no tienen la culpa: el pelo se cae tres meses después del golpe.</p><p class="p">One Punch-Man 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8416604509?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/n78Ss6FUNyI" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="¿cabrías en una pokéball? sí, y sin encogerte: toda la humanidad cabe en un terrón de azúcar. pokémon clip 'n' go charmander y poké ball">
+<a class="f" href="https://www.amazon.es/dp/B0CTTXV5HX?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-10-pokeball.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">¿Cabrías en una Pokéball? Sí, y sin encogerte: toda la humanidad cabe en un terrón de azúcar.</p><p class="p">Pokémon Clip 'N' Go Charmander y Poké Ball</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CTTXV5HX?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="¿quieres abrir las ocho puertas como gai? ya echas su vapor cada vez que entrenas con frío. funko might guy ocho puertas">
+<a class="f" href="https://www.amazon.es/dp/B0BDY764VM?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-10-ocho-puertas.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">¿Quieres abrir las Ocho Puertas como Gai? Ya echas su vapor cada vez que entrenas con frío.</p><p class="p">Funko Might Guy Ocho Puertas</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0BDY764VM?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/EDBcCo7wEvM" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="nunca has tocado tu móvil: tus átomos se frenan antes, como el infinito de gojo. jujutsu kaisen 01">
+<a class="f" href="https://www.amazon.es/dp/8467961112?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-10-infinito-gojo.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Nunca has tocado tu móvil: tus átomos se frenan antes, como el Infinito de Gojo.</p><p class="p">Jujutsu Kaisen 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8467961112?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/ADM7Pta5Ifk" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="¿correr como naruto te hace más rápido? lo midieron con cronómetro y la diferencia es ridícula. bandana de konoha">
+<a class="f" href="https://www.amazon.es/dp/B08NGT99HG?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-10-correr-como-naruto.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">¿Correr como Naruto te hace más rápido? Lo midieron con cronómetro y la diferencia es ridícula.</p><p class="p">Bandana de Konoha</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B08NGT99HG?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="¿quieres hacer un chidori como sasuke? ya lo haces cada vez que te quitas un jersey a oscuras. bola de plasma">
+<a class="f" href="https://www.amazon.es/dp/B089N5HXR9?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-10-chidori.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">¿Quieres hacer un Chidori como Sasuke? Ya lo haces cada vez que te quitas un jersey a oscuras.</p><p class="p">Bola de plasma</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B089N5HXR9?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="manga" data-q="mientras ves este reel te mueren casi 4 millones de células cada segundo, y no lo notas. cells at work! vol. 1">
+<a class="f" href="https://www.amazon.es/dp/8416703892?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-10-celulas.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Mientras ves este reel te mueren casi 4 millones de células cada segundo, y no lo notas.</p><p class="p">Cells at Work! vol. 1</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8416703892?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/ISY6HVf-XHo" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="¿por qué en dragon ball gritan al transformarse? porque gritando aprietas un 7 % más fuerte, y tú ya lo haces. dragon ball ultimate nº 01">
+<a class="f" href="https://www.amazon.es/dp/8413418496?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-10-avatar-grito.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">¿Por qué en Dragon Ball gritan al transformarse? Porque gritando aprietas un 7 % más fuerte, y tú ya lo haces.</p><p class="p">Dragon Ball Ultimate nº 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8413418496?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/xINkpr9fpiA" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="hay una rana que se vuelve casi invisible al dormirse: esconde su sangre. my hero academia nº 01">
+<a class="f" href="https://www.amazon.es/dp/8416693501?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-09-invisible-hagakure.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Hay una rana que se vuelve casi invisible al dormirse: esconde su sangre.</p><p class="p">My Hero Academia nº 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8416693501?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="manga" data-q="nueve de cada diez personas a las que les cae un rayo sobreviven. guardianes de la noche 01">
+<a class="f" href="https://www.amazon.es/dp/8467960965?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-zenitsu.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Nueve de cada diez personas a las que les cae un rayo sobreviven.</p><p class="p">Guardianes de la Noche 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8467960965?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/eBLcNbVD5c0" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="¿volver de la muerte, como en dragon ball? una mujer estuvo más de dos horas y media con el corazón parado, y volvió. set de las 7 bolas de dragón">
+<a class="f" href="https://www.amazon.es/dp/B0H3KTZ32B?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-volver-de-la-muerte.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">¿Volver de la muerte, como en Dragon Ball? Una mujer estuvo más de dos horas y media con el corazón parado, y volvió.</p><p class="p">Set de las 7 Bolas de Dragón</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0H3KTZ32B?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="el tekkai de lucci existe, y no es músculo ni metal: es un líquido que tienes en la cocina. maizena">
+<a class="f" href="https://www.amazon.es/dp/B00XA2I7KU?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-tekkai.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">El Tekkai de Lucci existe, y no es músculo ni metal: es un líquido que tienes en la cocina.</p><p class="p">Maizena</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B00XA2I7KU?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/FLT3po2smow" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="una pulga salta 100 veces lo que mide, y aun así tú saltas más alto que ella. naruto nº 01">
+<a class="f" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-saltar.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Una pulga salta 100 veces lo que mide, y aun así tú saltas más alto que ella.</p><p class="p">Naruto nº 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/GOa7J05Ii18" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="un científico hizo flotar una rana viva con un imán. años después ganó el nobel (por otra cosa). maceta bonsái que levita con imanes">
+<a class="f" href="https://www.amazon.es/dp/B08MCHT1FG?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-levitar-como-uraraka.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Un científico hizo flotar una rana viva con un imán. Años después ganó el Nobel (por otra cosa).</p><p class="p">Maceta bonsái que levita con imanes</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B08MCHT1FG?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="manga" data-q="goemon corta balas con la espada. alguien lo hizo de verdad, y no gracias a la espada. lupin iii 1">
+<a class="f" href="https://www.amazon.es/dp/8491675892?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-katana-bala.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Goemon corta balas con la espada. Alguien lo hizo de verdad, y no gracias a la espada.</p><p class="p">Lupin III 1</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8491675892?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="manga" data-q="¿romper algo con un grito, como luffy con el haki del rey? se puede, pero gritar más fuerte no sirve de nada. one piece nº 01">
+<a class="f" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-grito-haki.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">¿Romper algo con un grito, como Luffy con el Haki del Rey? Se puede, pero gritar más fuerte no sirve de nada.</p><p class="p">One Piece nº 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="gohan se enfada y levanta lo imposible. y tú ya tienes esa fuerza: tu cerebro no te deja usarla. figura gohan bandai">
+<a class="f" href="https://www.amazon.es/dp/B07C7ZWYRP?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-gohan-coche.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">Gohan se enfada y levanta lo imposible. Y tú ya tienes esa fuerza: tu cerebro no te deja usarla.</p><p class="p">Figura Gohan Bandai</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B07C7ZWYRP?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="usain bolt llegó a 44,7 km/h, y la ciencia dice que podríamos pasar de 60. funko rock lee">
+<a class="f" href="https://www.amazon.es/dp/B0FG4XVFJJ?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-correr-como-rock-lee.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">Usain Bolt llegó a 44,7 km/h, y la ciencia dice que podríamos pasar de 60.</p><p class="p">Funko Rock Lee</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0FG4XVFJJ?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/pGn4UWPC8Ac" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="aokiji congela el mar de un toque. y tú puedes hacerlo con una botella de agua, sin más frío. figura kuzan aokiji banpresto">
+<a class="f" href="https://www.amazon.es/dp/B0G2N796KG?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-aokiji.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">Aokiji congela el mar de un toque. Y tú puedes hacerlo con una botella de agua, sin más frío.</p><p class="p">Figura Kuzan Aokiji Banpresto</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0G2N796KG?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="manga" data-q="tsunade parte rocas de un puñetazo. tu hueso aguanta más de 40 veces más que el hormigón, y aun así te romperías la mano. naruto nº 01">
+<a class="f" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-07-tsunade.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Tsunade parte rocas de un puñetazo. Tu hueso aguanta más de 40 veces más que el hormigón, y aun así te romperías la mano.</p><p class="p">Naruto nº 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/StodBDv2zzU" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="naruto encierra aire girando en su mano. un anillo de aire que gira apaga velas a metros. naruto nº 01">
+<a class="f" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-07-rasengan.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Naruto encierra aire girando en su mano. Un anillo de aire que gira apaga velas a metros.</p><p class="p">Naruto nº 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/LryZX59G0Vs" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="sasuke escupe fuego. los tragafuegos de verdad no lo sacan de la boca: el fuego nace en la antorcha. funko sasuke uchiha (naruto classic)">
+<a class="f" href="https://www.amazon.es/dp/B0DJRZ1QNX?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-07-katon.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">Sasuke escupe fuego. Los tragafuegos de verdad no lo sacan de la boca: el fuego nace en la antorcha.</p><p class="p">Funko Sasuke Uchiha (Naruto Classic)</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0DJRZ1QNX?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/J9seNor5Lz8" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="goku junta energía en las manos. la física sabe hacerlo: se llama plasma. funko goku con onda kamehameha">
+<a class="f" href="https://www.amazon.es/dp/B08LQ591C3?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-07-kamehameha.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">Goku junta energía en las manos. La física sabe hacerlo: se llama plasma.</p><p class="p">Funko Goku con onda Kamehameha</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B08LQ591C3?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/hzYgxmV90HU" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="un golpe flojo en el pecho puede parar un corazón, si cae en 15 milésimas exactas. el cuerpo humano, bill bryson">
+<a class="f" href="https://www.amazon.es/dp/8491874801?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-07-golpe-corazon.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Un golpe flojo en el pecho puede parar un corazón, si cae en 15 milésimas exactas.</p><p class="p">El cuerpo humano, Bill Bryson</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8491874801?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/dVZzpsj-P68" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="luffy bombea sangre con las piernas. tu cuerpo también: tus gemelos son tu segundo corazón. calcetines de compresión danish endurance">
+<a class="f" href="https://www.amazon.es/dp/B07QB3FLPZ?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-07-gear-second.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Luffy bombea sangre con las piernas. Tu cuerpo también: tus gemelos son tu segundo corazón.</p><p class="p">Calcetines de compresión Danish Endurance</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B07QB3FLPZ?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/w9lhWDAgRSg" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="neji ve a través de las paredes. con partículas que caen del cielo encontraron un hueco escondido en la gran pirámide. naruto nº 01">
+<a class="f" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-07-byakugan.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Neji ve a través de las paredes. Con partículas que caen del cielo encontraron un hueco escondido en la Gran Pirámide.</p><p class="p">Naruto nº 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/LJAoNYKMZFM" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="zoro corta acero de un tajo. tu katana rebotaría, y no porque el acero sea más duro. funko roronoa zoro">
+<a class="f" href="https://www.amazon.es/dp/B08FMSC7NC?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-06-zoro.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">Zoro corta acero de un tajo. Tu katana rebotaría, y no porque el acero sea más duro.</p><p class="p">Funko Roronoa Zoro</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B08FMSC7NC?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/sGCfi2Vck9s" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="una mosca ve 250 imágenes por segundo. tú, 60: para ella, tu mano va a cámara lenta. funko itachi uchiha">
+<a class="f" href="https://www.amazon.es/dp/B0CLFNMTMV?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-06-sharingan.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">Una mosca ve 250 imágenes por segundo. Tú, 60: para ella, tu mano va a cámara lenta.</p><p class="p">Funko Itachi Uchiha</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CLFNMTMV?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="piccolo se regenera un brazo. tú no, pero tienes un órgano que vuelve a crecer aunque te quiten más de la mitad. figura piccolo tamashii daima">
+<a class="f" href="https://www.amazon.es/dp/B0D3KTT41G?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-06-piccolo.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">Piccolo se regenera un brazo. Tú no, pero tienes un órgano que vuelve a crecer aunque te quiten más de la mitad.</p><p class="p">Figura Piccolo Tamashii DAIMA</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0D3KTT41G?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/_Ony01TO1P0" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="zeppeli rompe una roca a través de una rana sin hacerle nada. los médicos lo hacen cada día. jojo's bizarre adventure parte 1">
+<a class="f" href="https://www.amazon.es/dp/8417099417?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-06-hamon.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Zeppeli rompe una roca a través de una rana sin hacerle nada. Los médicos lo hacen cada día.</p><p class="p">JoJo's Bizarre Adventure parte 1</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8417099417?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/JrD99h7JX24" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="tanjiro sopla calabazas para tener más fuerza. tu sangre ya va al 98 % de oxígeno. pulsioxímetro de dedo">
+<a class="f" href="https://www.amazon.es/dp/B08R39Y1H4?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-05-respirar.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Tanjiro sopla calabazas para tener más fuerza. Tu sangre ya va al 98 % de oxígeno.</p><p class="p">Pulsioxímetro de dedo</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B08R39Y1H4?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/XN3l7ufnFuM" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="lo que le pasa a tu cerebro si no duermes, día a día. antifaz para dormir myhalos">
+<a class="f" href="https://www.amazon.es/dp/B09CZ68WV3?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-04-sin-dormir.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Lo que le pasa a tu cerebro si no duermes, día a día.</p><p class="p">Antifaz para dormir MyHalos</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B09CZ68WV3?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/XTSUSPADEOo" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="existe una cueva con cristales de 11 metros, como en un mundo de fantasía. mega kit de cristales national geographic">
+<a class="f" href="https://www.amazon.es/dp/B0DTY7F7Y3?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-04-naica.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Existe una cueva con cristales de 11 metros, como en un mundo de fantasía.</p><p class="p">Mega kit de cristales National Geographic</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0DTY7F7Y3?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/iCWz0Zi8vA0" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="una rana se congela cada invierno: el corazón se le para, y en primavera se va saltando. ¿qué pasaría si...?">
+<a class="f" href="https://www.amazon.es/dp/8403517297?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-03-rana.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Una rana se congela cada invierno: el corazón se le para, y en primavera se va saltando.</p><p class="p">¿Qué pasaría si...?</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8403517297?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/dg6YYaQmFbU" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="hay un hombre que se estira la piel casi 16 cm, y no es por entrenar. one piece nº 01">
+<a class="f" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-03-cuerpo-de-goma.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Hay un hombre que se estira la piel casi 16 cm, y no es por entrenar.</p><p class="p">One Piece nº 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/R59UJIxAdu0" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="hay un animal al que le vuelve a crecer la pata entera, sin una sola cicatriz. peluche ajolote wild republic">
+<a class="f" href="https://www.amazon.es/dp/B0F2N6DW8D?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-02-regenerarse.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧸 Figura</span><p class="g">Hay un animal al que le vuelve a crecer la pata entera, sin una sola cicatriz.</p><p class="p">Peluche ajolote Wild Republic</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0F2N6DW8D?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/9Qf-mWjB4is" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="tu cuerpo ya lo hace cuando te da calambre una puerta. bola de plasma">
+<a class="f" href="https://www.amazon.es/dp/B089N5HXR9?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-02-rayo-con-las-manos.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Tu cuerpo ya lo hace cuando te da calambre una puerta.</p><p class="p">Bola de plasma</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B089N5HXR9?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/66yj2tiaZ40" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="los alquimistas nunca lo lograron. la física, sí: plomo convertido en oro de verdad. fullmetal alchemist kanzenban 1">
+<a class="f" href="https://www.amazon.es/dp/8467963131?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-02-oro.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Los alquimistas nunca lo lograron. La física, sí: plomo convertido en oro de verdad.</p><p class="p">Fullmetal Alchemist kanzenban 1</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8467963131?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/O3fk-11ymxQ" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="hay una velocidad a la que dejas de acelerar, saltes desde donde saltes. ¿qué pasaría si...?">
+<a class="f" href="https://www.amazon.es/dp/8403517297?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-02-nubes.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Hay una velocidad a la que dejas de acelerar, saltes desde donde saltes.</p><p class="p">¿Qué pasaría si...?</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8403517297?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/Gwg9CGpViYE" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="hay una medusa que, cuando envejece, vuelve a ser joven. lámpara de medusas led">
+<a class="f" href="https://www.amazon.es/dp/B0DC6V7HKF?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-02-medusa.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Hay una medusa que, cuando envejece, vuelve a ser joven.</p><p class="p">Lámpara de medusas LED</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0DC6V7HKF?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/4Kqish3Pi3w" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="el agua corta acero. solo hay que dispararla el doble de rápido que una bala. kärcher k2 hidrolimpiadora">
+<a class="f" href="https://www.amazon.es/dp/B0DQ17RC2R?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-02-agua-corta-acero.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">El agua corta acero. Solo hay que dispararla el doble de rápido que una bala.</p><p class="p">Kärcher K2 hidrolimpiadora</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0DQ17RC2R?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="manga" data-q="un humano de 15 metros no daría miedo: se rompería con su propio peso. ataque a los titanes, ed. integral 1">
+<a class="f" href="https://www.amazon.es/dp/8467964146?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-10-31-titanes.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Un humano de 15 metros no daría miedo: se rompería con su propio peso.</p><p class="p">Ataque a los Titanes, ed. integral 1</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8467964146?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="manga" data-q="naruto lo hace con chakra. un lagarto lo hace corriendo. naruto nº 01">
+<a class="f" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-10-31-agua.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Naruto lo hace con chakra. Un lagarto lo hace corriendo.</p><p class="p">Naruto nº 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/o7lm8te2LIA" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="¿los tréboles de cinco hojas de black clover existen de verdad? sí, y hay uno con 63. black clover 01">
+<a class="f" href="https://www.amazon.es/dp/8467961198?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-10-30-trebol.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">¿Los tréboles de cinco hojas de Black Clover existen de verdad? Sí, y hay uno con 63.</p><p class="p">Black Clover 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8467961198?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="manga" data-q="saitama lo hace en cada capítulo. en la vida real, solo un látigo lo consigue. one punch-man 01">
+<a class="f" href="https://www.amazon.es/dp/8416604509?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-10-30-punetazo.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="g">Saitama lo hace en cada capítulo. En la vida real, solo un látigo lo consigue.</p><p class="p">One Punch-Man 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8416604509?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="goku entrenaba a 100 veces la gravedad. tú no aguantarías ni unos segundos (y no por los músculos). chaleco lastrado proiron 10 kg">
+<a class="f" href="https://www.amazon.es/dp/B09QXGQNFC?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-10-30-gravedad.jpg" alt="" loading="lazy" width="240" height="427"></a>
+<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Goku entrenaba a 100 veces la gravedad. Tú no aguantarías ni unos segundos (y no por los músculos).</p><p class="p">Chaleco lastrado PROIRON 10 kg</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B09QXGQNFC?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
+</div>
+<button class="todos" id="todos">VER LOS 53 →</button>
 <p class="vacio" id="vacio">Ese aún no está… ¡pídemelo en los comentarios! 😤</p>
-<footer>Como afiliado de Amazon, gano una comisión por las compras que cumplan los requisitos. A ti no te cuesta más y me ayudas a seguir haciendo vídeos 💛</footer>
+</section>
+
+<section id="videos"><h2>ÚLTIMOS VÍDEOS</h2><p class="sub">¿Te perdiste alguno? Aquí los tienes.</p>
+<div class="tira">
+<a class="vid" href="https://www.youtube.com/shorts/4Uk1amLIWBo" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-12-respiracion-del-agua.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">Mete la cara en agua fría y tu corazón late más despacio: es tu propio modo agua.</span></a>
+<a class="vid" href="https://www.youtube.com/shorts/Ai4RUQ_Hu6o" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-12-pelo-super-saiyan.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">Frota un globo en tu pelo y cada pelo se aparta de los demás. No es magia: es la misma chispa del pomo.</span></a>
+<a class="vid" href="https://www.youtube.com/shorts/CDooXK6JpDI" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-11-haki-observacion.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">Hay quien va en bici sin ver nada, guiándose solo por el eco de sus chasquidos.</span></a>
+<a class="vid" href="https://www.youtube.com/shorts/n78Ss6FUNyI" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-10-saitama-calvo.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">¿Te quedarías calvo entrenando como Saitama? Las flexiones no tienen la culpa: el pelo se cae tres meses después del golpe.</span></a>
+<a class="vid" href="https://www.youtube.com/shorts/EDBcCo7wEvM" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-10-ocho-puertas.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">¿Quieres abrir las Ocho Puertas como Gai? Ya echas su vapor cada vez que entrenas con frío.</span></a>
+<a class="vid" href="https://www.youtube.com/shorts/ADM7Pta5Ifk" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-10-infinito-gojo.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">Nunca has tocado tu móvil: tus átomos se frenan antes, como el Infinito de Gojo.</span></a>
+<a class="vid" href="https://www.youtube.com/shorts/ISY6HVf-XHo" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-10-celulas.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">Mientras ves este reel te mueren casi 4 millones de células cada segundo, y no lo notas.</span></a>
+<a class="vid" href="https://www.youtube.com/shorts/xINkpr9fpiA" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-10-avatar-grito.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">¿Por qué en Dragon Ball gritan al transformarse? Porque gritando aprietas un 7 % más fuerte, y tú ya lo haces.</span></a>
+<a class="vid" href="https://www.youtube.com/shorts/eBLcNbVD5c0" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-08-zenitsu.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">Nueve de cada diez personas a las que les cae un rayo sobreviven.</span></a>
+<a class="vid" href="https://www.youtube.com/shorts/FLT3po2smow" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-08-tekkai.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">El Tekkai de Lucci existe, y no es músculo ni metal: es un líquido que tienes en la cocina.</span></a>
+</div>
+<a class="mas" href="https://www.youtube.com/@To_Anime-1/shorts" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15V9l5.8 3z"/></svg> VER TODOS EN YOUTUBE</a>
+</section>
+
+<section id="redes"><h2>SÍGUEME</h2><p class="sub">Un vídeo nuevo casi cada día. Elige dónde verlo.</p>
+<div class="rcs">
+<a class="rc yt" href="https://www.youtube.com/@To_Anime-1" target="_blank" rel="noopener"><span class="ri"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15V9l5.8 3z"/></svg></span><span class="rt"><b>YouTube</b><span>@To_Anime-1</span></span><span class="rb">Suscríbete</span></a>
+<a class="rc tt" href="https://www.tiktok.com/@to_anime._" target="_blank" rel="noopener"><span class="ri"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.4v13.3a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.1a6.3 6.3 0 1 0 5.4 6.2V8.6a8 8 0 0 0 4.7 1.5V6.7a4.7 4.7 0 0 1-4.7-4.7z"/></svg></span><span class="rt"><b>TikTok</b><span>@to_anime._</span></span><span class="rb">Sígueme</span></a>
+<a class="rc ig" href="https://www.instagram.com/to_.anime._/" target="_blank" rel="noopener"><span class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg></span><span class="rt"><b>Instagram</b><span>@to_.anime._</span></span><span class="rb">Sígueme</span></a>
+</div>
+</section>
+
+<section id="sobre"><h2>¿QUÉ ES TOANIME?</h2>
+<div class="panel"><p>¿Se puede cortar acero como Zoro? ¿Caminar sobre el agua como Naruto? ¿Lanzar un Kamehameha? En ToAnime cojo lo que hacen tus personajes favoritos y te cuento qué pasaría si lo intentaras <b>de verdad</b>.</p>
+<div class="vinetas"><div><span>🔬</span>Ciencia comprobada: cada dato sale de un estudio o de una fuente oficial.</div><div><span>⚡</span>En menos de un minuto, dibujado y sin rollos.</div><div><span>🎌</span>One Piece, Naruto, Dragon Ball, Jujutsu Kaisen y muchos más.</div></div>
+<p class="pide">💬 ¿Quieres que explique algo de tu anime? Pídemelo en los comentarios de cualquier vídeo.</p></div>
+</section>
+
+<footer><div class="redes"><a class="red yt" href="https://www.youtube.com/@To_Anime-1" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15V9l5.8 3z"/></svg></a><a class="red tt" href="https://www.tiktok.com/@to_anime._" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.4v13.3a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.1a6.3 6.3 0 1 0 5.4 6.2V8.6a8 8 0 0 0 4.7 1.5V6.7a4.7 4.7 0 0 1-4.7-4.7z"/></svg></a><a class="red ig" href="https://www.instagram.com/to_.anime._/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg></a></div>
+Como afiliado de Amazon, gano una comisión por las compras que cumplan los requisitos. A ti no te cuesta más y me ayudas a seguir haciendo vídeos 💛<br>© ToAnime</footer>
 </div>
 <script>
 const q=document.getElementById('q'),cs=[...document.querySelectorAll('.c')];let f='';
-function filtra(){const t=q.value.toLowerCase().trim();let n=0;cs.forEach(c=>{const ok=(!f||c.dataset.cat===f)&&c.dataset.q.includes(t);c.style.display=ok?'':'none';n+=ok});document.getElementById('vacio').style.display=n?'none':'block'}
+const MAX=12,bt=document.getElementById('todos');let todo=false;
+function filtra(){const t=q.value.toLowerCase().trim(),lim=!todo&&!t&&!f;let n=0;cs.forEach(c=>{const ok=(!f||c.dataset.cat===f)&&c.dataset.q.includes(t);c.style.display=ok&&(!lim||n<MAX)?'':'none';n+=ok});document.getElementById('vacio').style.display=n?'none':'block';bt.style.display=lim&&n>MAX?'':'none'}
+bt.onclick=()=>{todo=true;filtra()};filtra();
 q.addEventListener('input',filtra);
 document.querySelectorAll('.chips button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.chips button').forEach(x=>x.classList.remove('on'));b.classList.add('on');f=b.dataset.f;filtra()});
+const ls=[...document.querySelectorAll('nav ul a')],ss=ls.map(a=>document.querySelector(a.getAttribute('href')));
+addEventListener('scroll',()=>{let i=-1;ss.forEach((s,k)=>{if(s.getBoundingClientRect().top<120)i=k});ls.forEach((a,k)=>a.classList.toggle('on',k===i))},{passive:true});
 </script>
 </body></html>
