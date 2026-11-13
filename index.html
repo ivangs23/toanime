@@ -50,35 +50,42 @@ h2{font-family:Bangers,Impact,sans-serif;font-weight:400;letter-spacing:1.5px;fo
  -webkit-text-stroke:2px var(--tinta);paint-order:stroke fill;text-shadow:3px 3px 0 var(--tinta);transform:rotate(-1.5deg);transform-origin:left}
 .sub{color:#fff;font-weight:800;margin:0 0 14px;opacity:.9}
 /* Tienda */
+.pestanas{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;margin:0 -16px;padding-left:16px;scrollbar-width:none}.pestanas::-webkit-scrollbar{display:none}
+.pestanas button{flex:none;font-family:Bangers,Impact,sans-serif;letter-spacing:1px;font-size:18px;padding:6px 12px 3px;border:3px solid var(--tinta);border-radius:10px;
+ background:#fff;color:var(--tinta);box-shadow:3px 3px 0 var(--tinta);cursor:pointer;border-bottom:6px solid var(--col,var(--amarillo))}
+.pestanas button.on{background:var(--col,var(--amarillo));color:#fff;-webkit-text-stroke:1px var(--tinta);paint-order:stroke fill;transform:translateY(-2px)}
+.pestanas button[data-a=""].on,.pestanas button[data-a=dragon-ball].on,.pestanas button[data-a=pokemon].on{color:var(--tinta);-webkit-text-stroke:0}
 .buscar{position:relative;margin:4px 0 10px}
-.buscar input{width:100%;padding:13px 14px 13px 44px;font:800 16px Nunito,sans-serif;border:3px solid var(--tinta);border-radius:14px;background:var(--papel);
+.buscar input{width:100%;padding:12px 14px 12px 44px;font:800 16px Nunito,sans-serif;border:3px solid var(--tinta);border-radius:14px;background:var(--papel);
  box-shadow:4px 4px 0 var(--tinta);outline:none}
 .buscar:before{content:"🔍";position:absolute;left:14px;top:50%;transform:translateY(-50%)}
 .chips{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
-.chips button{flex:none;font:900 14px Nunito,sans-serif;padding:7px 12px;border:3px solid var(--tinta);border-radius:999px;background:#fff;
+.chips button{flex:none;font:900 14px Nunito,sans-serif;padding:6px 12px;border:3px solid var(--tinta);border-radius:999px;background:#fff;
  box-shadow:2px 2px 0 var(--tinta);cursor:pointer;color:var(--tinta)}
 .chips button.on{background:var(--amarillo);transform:translateY(-1px)}
-.rejilla{display:grid;gap:18px;padding:8px 0 10px}
-.c{position:relative;display:flex;gap:12px;background:var(--papel);border:3px solid var(--tinta);border-radius:6px;box-shadow:6px 6px 0 var(--tinta);
- padding:8px;transition:transform .12s,box-shadow .12s}
-.c:nth-child(odd){transform:rotate(-.8deg)}.c:nth-child(even){transform:rotate(.7deg)}
-@media(hover:hover){.c:hover{transform:translate(-2px,-2px) rotate(0);box-shadow:8px 8px 0 var(--tinta)}}
-.f{flex:none;width:98px;border:3px solid var(--tinta);border-radius:3px;overflow:hidden;background:#000}
-.f img{display:block;width:100%;height:174px;object-fit:cover}
-.t{display:flex;flex-direction:column;gap:6px;min-width:0;padding:2px 2px 2px 0;flex:1}
-.cat{align-self:flex-start;font:900 11px Nunito,sans-serif;text-transform:uppercase;letter-spacing:.5px;background:var(--azul);color:#fff;padding:3px 8px;border-radius:5px}
-.c[data-cat=manga] .cat{background:var(--rojo)}.c[data-cat=ciencia] .cat{background:var(--lila)}
-.g{margin:0;font-weight:900;font-size:15px;line-height:1.25}
-.p{margin:0;font-weight:700;font-size:13.5px;color:#4a4a55}
-.acc{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
-.b{font-family:Bangers,Impact,sans-serif;letter-spacing:1px;font-size:19px;background:var(--amarillo);color:var(--tinta);text-decoration:none;
- border:3px solid var(--tinta);border-radius:10px;padding:4px 12px 2px;box-shadow:3px 3px 0 var(--tinta)}
+.grupo{margin:22px 0 6px}
+.grupo h3{display:flex;align-items:center;gap:10px;margin:0 0 12px;font-family:Bangers,Impact,sans-serif;font-weight:400;letter-spacing:1.5px;font-size:26px;line-height:1}
+.grupo h3 span{background:var(--col);color:#fff;-webkit-text-stroke:1.5px var(--tinta);paint-order:stroke fill;border:3px solid var(--tinta);border-radius:8px;
+ padding:6px 12px 3px;box-shadow:4px 4px 0 var(--tinta);transform:rotate(-1.5deg)}
+.grupo h3 small{font:900 13px Nunito,sans-serif;color:#fff;opacity:.75}
+.rejilla{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.c{position:relative;display:flex;flex-direction:column;background:var(--papel);border:3px solid var(--tinta);border-radius:8px;box-shadow:5px 5px 0 var(--tinta);
+ overflow:hidden;transition:transform .12s,box-shadow .12s}
+@media(hover:hover){.c:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--tinta)}.c:hover svg use{transform:scale(1.06) rotate(-3deg)}}
+.f{position:relative;display:block;border-bottom:3px solid var(--tinta)}
+.f svg{display:block;width:100%;height:auto;aspect-ratio:1}
+.f svg use{transform-origin:50% 50%;transform-box:fill-box;transition:transform .2s}
+.env{position:absolute;left:6px;bottom:6px;font:900 10.5px Nunito,sans-serif;letter-spacing:.3px;background:var(--rojo);color:#fff;border:2px solid var(--tinta);border-radius:6px;padding:2px 6px}
+.t{display:flex;flex-direction:column;gap:6px;padding:9px 9px 10px;flex:1}
+.cat{align-self:flex-start;font:900 10.5px Nunito,sans-serif;text-transform:uppercase;letter-spacing:.4px;background:var(--azul);color:#fff;padding:3px 7px;border-radius:5px}
+.p{margin:0;font-weight:900;font-size:14px;line-height:1.22}
+.acc{margin-top:auto;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding-top:4px}
+.b{white-space:nowrap;font-family:Bangers,Impact,sans-serif;letter-spacing:1px;font-size:16px;background:var(--amarillo);color:var(--tinta);text-decoration:none;
+ border:3px solid var(--tinta);border-radius:9px;padding:4px 9px 2px;box-shadow:3px 3px 0 var(--tinta)}
 .b:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--tinta)}
-.v{font:900 13px Nunito,sans-serif;color:var(--tinta);text-decoration:none;border-bottom:2px solid var(--rojo)}
-.nuevo{position:absolute;top:-14px;right:-8px;z-index:2;font-family:Bangers,Impact,sans-serif;letter-spacing:1px;font-size:18px;color:#fff;background:var(--rojo);
- border:3px solid var(--tinta);padding:3px 10px 1px;border-radius:8px;transform:rotate(8deg);box-shadow:3px 3px 0 var(--tinta)}
-.todos{display:block;margin:8px auto 0;font-family:Bangers,Impact,sans-serif;letter-spacing:1px;font-size:22px;color:var(--tinta);background:var(--amarillo);
- border:3px solid var(--tinta);border-radius:12px;padding:8px 20px 5px;box-shadow:4px 4px 0 var(--tinta);cursor:pointer}
+.v{font:900 12.5px Nunito,sans-serif;color:var(--tinta);text-decoration:none;border-bottom:2px solid var(--rojo)}
+.mas-grupo{display:block;margin:14px auto 0;font-family:Bangers,Impact,sans-serif;letter-spacing:1px;font-size:18px;color:var(--tinta);background:#fff;
+ border:3px solid var(--tinta);border-bottom:6px solid var(--col);border-radius:10px;padding:6px 14px 3px;box-shadow:3px 3px 0 var(--tinta);cursor:pointer}
 .vacio{display:none;text-align:center;color:#fff;font-weight:800;padding:20px}
 /* Vídeos */
 .tira{display:grid;grid-auto-flow:column;grid-auto-columns:42%;gap:14px;overflow-x:auto;padding:6px 4px 16px;margin:0 -16px;padding-left:16px;scroll-snap-type:x mandatory;scrollbar-width:none}
@@ -121,10 +128,12 @@ footer a{color:var(--amarillo)}
  .hero img{width:48%;max-width:230px}
  .bocadillo{font-size:16px;margin-bottom:30%}
  .rayos{inset:-40px -100px auto 30%;height:560px}
+ .pestanas{margin:0;padding-left:2px;flex-wrap:wrap}
  .filtros{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin:4px 0 8px}
- .buscar{flex:1 1 320px;max-width:460px;margin:0}
+ .buscar{flex:1 1 300px;max-width:420px;margin:0}
  .chips{padding:4px 2px}
- .rejilla{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 22px;padding-top:18px}
+ .rejilla{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+ .p{font-size:15px}
  .tira{grid-auto-columns:23%;margin:0;padding-left:4px}
  .rcs{grid-template-columns:repeat(3,1fr)}
  .rc{flex-direction:column;text-align:center;padding:22px 14px}.rb{margin:6px 0 0}
@@ -135,7 +144,7 @@ footer a{color:var(--amarillo)}
 /* PC */
 @media (min-width:1080px){
  .wrap{max-width:1240px}
- .rejilla{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 26px}
+ .rejilla{grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
  .tira{grid-auto-flow:row;grid-template-columns:repeat(5,1fr);overflow:visible}
  .hero img{max-width:260px}
  .bocadillo{font-size:17px;padding:14px 18px}
@@ -146,232 +155,317 @@ footer a{color:var(--amarillo)}
 <div class="wrap">
 <header id="inicio"><div class="rayos"></div>
 <div class="intro"><h1>TOANIME</h1><p class="lema">La ciencia <b>de verdad</b> detrás del anime, en menos de un minuto.</p><div class="redes"><a class="red yt" href="https://www.youtube.com/@To_Anime-1" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15V9l5.8 3z"/></svg></a><a class="red tt" href="https://www.tiktok.com/@to_anime._" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.4v13.3a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.1a6.3 6.3 0 1 0 5.4 6.2V8.6a8 8 0 0 0 4.7 1.5V6.7a4.7 4.7 0 0 1-4.7-4.7z"/></svg></a><a class="red ig" href="https://www.instagram.com/to_.anime._/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg></a></div></div>
-<div class="hero"><img src="toanime.png" alt="ToAnime" width="416" height="520"><div class="bocadillo">¡Ey! Aquí tienes el manga, la figura o el <b>experimento</b> de cada vídeo 👇<br><a href="#tienda">VER LA TIENDA</a></div></div>
+<div class="hero"><img src="toanime.png" alt="ToAnime" width="416" height="520"><div class="bocadillo">¡Ey! Funkos, figuras, manga y <b>experimentos</b> de tus animes, todo en un sitio 👇<br><a href="#tienda">VER LA TIENDA</a></div></div>
 </header>
 
-<section id="tienda"><h2>LO DE CADA VÍDEO</h2><p class="sub">El manga, la figura o el experimento del que hablo. Busca el tuyo.</p>
-<div class="filtros"><div class="buscar"><input id="q" type="search" placeholder="Busca: Luffy, Chidori, Goku..." autocomplete="off"></div>
-<div class="chips"><button class="on" data-f="">Todo</button><button data-f="manga">📖 Manga</button><button data-f="figuras">🧸 Figuras</button><button data-f="ciencia">🧪 Ciencia en casa</button></div></div>
+<section id="tienda"><h2>LA TIENDA</h2><p class="sub">Funkos, figuras, manga, cosplay... de tus animes y de mis vídeos.</p>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<pattern id="puntos" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.1" fill="#000" opacity=".16"/></pattern>
+<pattern id="rayos" width="100" height="100" patternUnits="userSpaceOnUse"><g fill="#fff" opacity=".2"><path d="M50 50 L140.0 50.0 L137.8 69.6Z"/><path d="M50 50 L127.9 95.0 L116.2 110.9Z"/><path d="M50 50 L95.0 127.9 L76.9 135.9Z"/><path d="M50 50 L50.0 140.0 L30.4 137.8Z"/><path d="M50 50 L5.0 127.9 L-10.9 116.2Z"/><path d="M50 50 L-27.9 95.0 L-35.9 76.9Z"/><path d="M50 50 L-40.0 50.0 L-37.8 30.4Z"/><path d="M50 50 L-27.9 5.0 L-16.2 -10.9Z"/><path d="M50 50 L5.0 -27.9 L23.1 -35.9Z"/><path d="M50 50 L50.0 -40.0 L69.6 -37.8Z"/><path d="M50 50 L95.0 -27.9 L110.9 -16.2Z"/><path d="M50 50 L127.9 5.0 L135.9 23.1Z"/></g></pattern>
+<symbol id="i-funkos" viewBox="0 0 100 100"><rect x="30" y="80" width="40" height="9" rx="3" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><rect x="37" y="57" width="26" height="25" rx="8" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><rect x="20" y="10" width="60" height="50" rx="22" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><path d="M20 36 Q18 10 50 9 Q82 10 80 36 Q72 22 60 26 L54 18 L46 27 Q32 22 20 36Z" fill="currentColor" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="38" cy="40" r="6" fill="#111"/><circle cx="62" cy="40" r="6" fill="#111"/><circle cx="40" cy="38" r="2" fill="#fff"/><circle cx="64" cy="38" r="2" fill="#fff"/></symbol><symbol id="i-figuras" viewBox="0 0 100 100"><ellipse cx="50" cy="88" rx="32" ry="7" fill="currentColor" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><path d="M50 34 L50 60 M50 42 L32 26 M50 42 L70 50 M50 60 L36 84 M50 60 L66 82" fill="none" stroke="#111" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 34 L50 60 M50 42 L32 26 M50 42 L70 50 M50 60 L36 84 M50 60 L66 82" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="22" r="11" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="30" cy="24" r="6" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="i-manga" viewBox="0 0 100 100"><rect x="26" y="12" width="52" height="76" rx="3" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><rect x="26" y="12" width="12" height="76" fill="currentColor" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><rect x="44" y="24" width="26" height="10" rx="2" fill="#111"/><path d="M44 44 H70 M44 54 H66 M44 64 H70" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><path d="M50 78 l4 -8 l4 8 l-6 -5 h6z" fill="#111"/></symbol><symbol id="i-juguetes" viewBox="0 0 100 100"><circle cx="50" cy="52" r="36" fill="#ff9f1c" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><path d="M50 32 l5.9 12 13.1 1.9 -9.5 9.3 2.2 13.1 -11.7 -6.2 -11.7 6.2 2.2 -13.1 -9.5 -9.3 13.1 -1.9z" fill="#e63946" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="36" cy="34" rx="9" ry="5" fill="#fff" opacity=".8" transform="rotate(-35 36 34)"/></symbol><symbol id="i-espadas" viewBox="0 0 100 100"><path d="M30 70 L86 14" fill="none" stroke="#111" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 70 L86 14" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 61 L39 77" stroke="#111" stroke-width="13" stroke-linecap="round"/><path d="M23 61 L39 77" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><path d="M12 88 L29 71" stroke="#111" stroke-width="13" stroke-linecap="round"/><path d="M12 88 L29 71" stroke="#3a2a1a" stroke-width="7" stroke-linecap="round" stroke-dasharray="3 3"/></symbol><symbol id="i-cosplay" viewBox="0 0 100 100"><path d="M34 14 L50 26 L66 14 L88 28 L80 48 L70 44 L70 88 L30 88 L30 44 L20 48 L12 28 Z" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><path d="M34 14 L50 52 L66 14" fill="none" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><path d="M30 64 H70" stroke="currentColor" stroke-width="8"/><path d="M30 60 H70 M30 68 H70" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="i-peluches" viewBox="0 0 100 100"><circle cx="28" cy="28" r="13" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72" cy="28" r="13" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="28" cy="28" r="6" fill="currentColor"/><circle cx="72" cy="28" r="6" fill="currentColor"/><circle cx="50" cy="54" r="32" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="50" cy="66" rx="14" ry="10" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="38" cy="48" r="5" fill="#111"/><circle cx="62" cy="48" r="5" fill="#111"/><ellipse cx="50" cy="61" rx="5" ry="3.5" fill="#111"/><path d="M45 70 Q50 75 55 70" fill="none" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="30" cy="62" r="5" fill="#ff8fab" opacity=".7"/><circle cx="70" cy="62" r="5" fill="#ff8fab" opacity=".7"/></symbol><symbol id="i-ciencia" viewBox="0 0 100 100"><path d="M41 12 H59 M43 12 V40 L21 80 Q18 88 27 88 H73 Q82 88 79 80 L57 40 V12" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><path d="M33 62 H67 L77 81 Q78 85 73 85 H27 Q22 85 23 81Z" fill="currentColor"/><circle cx="44" cy="74" r="4" fill="#fff"/><circle cx="56" cy="68" r="3" fill="#fff"/><circle cx="62" cy="28" r="5" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="70" cy="16" r="3.5" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="i-entrena" viewBox="0 0 100 100"><rect x="22" y="45" width="56" height="10" rx="3" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><rect x="10" y="26" width="14" height="48" rx="4" fill="currentColor" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><rect x="76" y="26" width="14" height="48" rx="4" fill="currentColor" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><rect x="22" y="33" width="9" height="34" rx="3" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><rect x="69" y="33" width="9" height="34" rx="3" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></symbol></defs></svg>
+<div class="pestanas"><button class="on" data-a="">Todo</button><button data-a="one-piece" style="--col:#d62828">One Piece</button><button data-a="naruto" style="--col:#f77f00">Naruto</button><button data-a="dragon-ball" style="--col:#ffb703">Dragon Ball</button><button data-a="jujutsu-kaisen" style="--col:#6a3fb5">Jujutsu Kaisen</button><button data-a="kimetsu-no-yaiba" style="--col:#2a9d8f">Kimetsu no Yaiba</button><button data-a="my-hero-academia" style="--col:#2b7de9">My Hero Academia</button><button data-a="pokemon" style="--col:#ffcb05">Pokémon</button><button data-a="ataque-a-los-titanes" style="--col:#8a6a4f">Ataque a los Titanes</button><button data-a="mas-animes" style="--col:#ef476f">Más animes</button><button data-a="ciencia-en-casa" style="--col:#7b5cff">Ciencia en casa</button></div>
+<div class="filtros"><div class="buscar"><input id="q" type="search" placeholder="Busca: Luffy, Funko, katana..." autocomplete="off"></div>
+<div class="chips"><button class="on" data-f="">Todas</button><button data-f="funkos">🤩 Funkos</button><button data-f="figuras">🗿 Figuras</button><button data-f="manga">📖 Manga</button><button data-f="juguetes">🎲 Juguetes</button><button data-f="espadas">⚔️ Espadas</button><button data-f="cosplay">🎭 Cosplay</button><button data-f="peluches">🧸 Peluches</button><button data-f="ciencia">🧪 Ciencia</button><button data-f="entrena">💪 Entrena</button></div></div>
+<div class="grupo" data-anime="one-piece" style="--col:#d62828"><h3><span>ONE PIECE</span><small>11</small></h3>
 <div class="rejilla">
-<article class="c" data-cat="manga" data-q="tu estómago se estira como el de luffy: lo que te frena es el cerebro. one piece nº 01"><span class="nuevo">¡NUEVO!</span>
-<a class="f" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-13-comer-como-luffy.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Tu estómago se estira como el de Luffy: lo que te frena es el cerebro.</p><p class="p">One Piece nº 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="manga" data-q="ahora mismo, sin moverte, sueltas tanta energía como una bombilla. dragon ball ultimate nº 01">
-<a class="f" href="https://www.amazon.es/dp/8413418496?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-13-genkidama.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Ahora mismo, sin moverte, sueltas tanta energía como una bombilla.</p><p class="p">Dragon Ball Ultimate nº 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8413418496?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="¿puedes meter a alguien en un genjutsu como itachi? con una mano de goma y dos pinceles, sí. funko itachi uchiha">
-<a class="f" href="https://www.amazon.es/dp/B0CLFNMTMV?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-13-genjutsu-itachi.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">¿Puedes meter a alguien en un genjutsu como Itachi? Con una mano de goma y dos pinceles, sí.</p><p class="p">Funko Itachi Uchiha</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CLFNMTMV?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="mete la cara en agua fría y tu corazón late más despacio: es tu propio modo agua. funko tanjiro">
-<a class="f" href="https://www.amazon.es/dp/B0CSVK84MR?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-12-respiracion-del-agua.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">Mete la cara en agua fría y tu corazón late más despacio: es tu propio modo agua.</p><p class="p">Funko Tanjiro</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CSVK84MR?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/4Uk1amLIWBo" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="frota un globo en tu pelo y cada pelo se aparta de los demás. no es magia: es la misma chispa del pomo. peluca super saiyan funidelia">
-<a class="f" href="https://www.amazon.es/dp/B0CFRQ1MQ4?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-12-pelo-super-saiyan.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">Frota un globo en tu pelo y cada pelo se aparta de los demás. No es magia: es la misma chispa del pomo.</p><p class="p">Peluca Super Saiyan Funidelia</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CFRQ1MQ4?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/Ai4RUQ_Hu6o" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="manga" data-q="hay quien va en bici sin ver nada, guiándose solo por el eco de sus chasquidos. one piece nº 01">
-<a class="f" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-11-haki-observacion.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Hay quien va en bici sin ver nada, guiándose solo por el eco de sus chasquidos.</p><p class="p">One Piece nº 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/CDooXK6JpDI" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="tus huesos ya hacen el haki de armadura: se vuelven más gruesos justo donde les pegas. funko monkey d. luffy">
-<a class="f" href="https://www.amazon.es/dp/B0CVNM5L6F?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-11-haki-de-armadura.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">Tus huesos ya hacen el Haki de armadura: se vuelven más gruesos justo donde les pegas.</p><p class="p">Funko Monkey D. Luffy</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CVNM5L6F?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="manga" data-q="¿te quedarías calvo entrenando como saitama? las flexiones no tienen la culpa: el pelo se cae tres meses después del golpe. one punch-man 01">
-<a class="f" href="https://www.amazon.es/dp/8416604509?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-10-saitama-calvo.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">¿Te quedarías calvo entrenando como Saitama? Las flexiones no tienen la culpa: el pelo se cae tres meses después del golpe.</p><p class="p">One Punch-Man 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8416604509?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/n78Ss6FUNyI" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="¿cabrías en una pokéball? sí, y sin encogerte: toda la humanidad cabe en un terrón de azúcar. pokémon clip 'n' go charmander y poké ball">
-<a class="f" href="https://www.amazon.es/dp/B0CTTXV5HX?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-10-pokeball.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">¿Cabrías en una Pokéball? Sí, y sin encogerte: toda la humanidad cabe en un terrón de azúcar.</p><p class="p">Pokémon Clip 'N' Go Charmander y Poké Ball</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CTTXV5HX?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="¿quieres abrir las ocho puertas como gai? ya echas su vapor cada vez que entrenas con frío. funko might guy ocho puertas">
-<a class="f" href="https://www.amazon.es/dp/B0BDY764VM?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-10-ocho-puertas.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">¿Quieres abrir las Ocho Puertas como Gai? Ya echas su vapor cada vez que entrenas con frío.</p><p class="p">Funko Might Guy Ocho Puertas</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0BDY764VM?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/EDBcCo7wEvM" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="manga" data-q="nunca has tocado tu móvil: tus átomos se frenan antes, como el infinito de gojo. jujutsu kaisen 01">
-<a class="f" href="https://www.amazon.es/dp/8467961112?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-10-infinito-gojo.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Nunca has tocado tu móvil: tus átomos se frenan antes, como el Infinito de Gojo.</p><p class="p">Jujutsu Kaisen 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8467961112?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/ADM7Pta5Ifk" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="¿correr como naruto te hace más rápido? lo midieron con cronómetro y la diferencia es ridícula. bandana de konoha">
-<a class="f" href="https://www.amazon.es/dp/B08NGT99HG?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-10-correr-como-naruto.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">¿Correr como Naruto te hace más rápido? Lo midieron con cronómetro y la diferencia es ridícula.</p><p class="p">Bandana de Konoha</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B08NGT99HG?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="ciencia" data-q="¿quieres hacer un chidori como sasuke? ya lo haces cada vez que te quitas un jersey a oscuras. bola de plasma">
-<a class="f" href="https://www.amazon.es/dp/B089N5HXR9?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-10-chidori.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">¿Quieres hacer un Chidori como Sasuke? Ya lo haces cada vez que te quitas un jersey a oscuras.</p><p class="p">Bola de plasma</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B089N5HXR9?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="manga" data-q="mientras ves este reel te mueren casi 4 millones de células cada segundo, y no lo notas. cells at work! vol. 1">
-<a class="f" href="https://www.amazon.es/dp/8416703892?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-10-celulas.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Mientras ves este reel te mueren casi 4 millones de células cada segundo, y no lo notas.</p><p class="p">Cells at Work! vol. 1</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8416703892?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/ISY6HVf-XHo" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="manga" data-q="¿por qué en dragon ball gritan al transformarse? porque gritando aprietas un 7 % más fuerte, y tú ya lo haces. dragon ball ultimate nº 01">
-<a class="f" href="https://www.amazon.es/dp/8413418496?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-10-avatar-grito.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">¿Por qué en Dragon Ball gritan al transformarse? Porque gritando aprietas un 7 % más fuerte, y tú ya lo haces.</p><p class="p">Dragon Ball Ultimate nº 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8413418496?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/xINkpr9fpiA" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="manga" data-q="hay una rana que se vuelve casi invisible al dormirse: esconde su sangre. my hero academia nº 01">
-<a class="f" href="https://www.amazon.es/dp/8416693501?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-09-invisible-hagakure.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Hay una rana que se vuelve casi invisible al dormirse: esconde su sangre.</p><p class="p">My Hero Academia nº 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8416693501?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="manga" data-q="nueve de cada diez personas a las que les cae un rayo sobreviven. guardianes de la noche 01">
-<a class="f" href="https://www.amazon.es/dp/8467960965?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-zenitsu.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Nueve de cada diez personas a las que les cae un rayo sobreviven.</p><p class="p">Guardianes de la Noche 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8467960965?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/eBLcNbVD5c0" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="¿volver de la muerte, como en dragon ball? una mujer estuvo más de dos horas y media con el corazón parado, y volvió. set de las 7 bolas de dragón">
-<a class="f" href="https://www.amazon.es/dp/B0H3KTZ32B?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-volver-de-la-muerte.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">¿Volver de la muerte, como en Dragon Ball? Una mujer estuvo más de dos horas y media con el corazón parado, y volvió.</p><p class="p">Set de las 7 Bolas de Dragón</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0H3KTZ32B?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="ciencia" data-q="el tekkai de lucci existe, y no es músculo ni metal: es un líquido que tienes en la cocina. maizena">
-<a class="f" href="https://www.amazon.es/dp/B00XA2I7KU?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-tekkai.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">El Tekkai de Lucci existe, y no es músculo ni metal: es un líquido que tienes en la cocina.</p><p class="p">Maizena</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B00XA2I7KU?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/FLT3po2smow" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="manga" data-q="una pulga salta 100 veces lo que mide, y aun así tú saltas más alto que ella. naruto nº 01">
-<a class="f" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-saltar.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Una pulga salta 100 veces lo que mide, y aun así tú saltas más alto que ella.</p><p class="p">Naruto nº 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/GOa7J05Ii18" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="ciencia" data-q="un científico hizo flotar una rana viva con un imán. años después ganó el nobel (por otra cosa). maceta bonsái que levita con imanes">
-<a class="f" href="https://www.amazon.es/dp/B08MCHT1FG?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-levitar-como-uraraka.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Un científico hizo flotar una rana viva con un imán. Años después ganó el Nobel (por otra cosa).</p><p class="p">Maceta bonsái que levita con imanes</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B08MCHT1FG?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="manga" data-q="goemon corta balas con la espada. alguien lo hizo de verdad, y no gracias a la espada. lupin iii 1">
-<a class="f" href="https://www.amazon.es/dp/8491675892?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-katana-bala.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Goemon corta balas con la espada. Alguien lo hizo de verdad, y no gracias a la espada.</p><p class="p">Lupin III 1</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8491675892?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="manga" data-q="¿romper algo con un grito, como luffy con el haki del rey? se puede, pero gritar más fuerte no sirve de nada. one piece nº 01">
-<a class="f" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-grito-haki.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">¿Romper algo con un grito, como Luffy con el Haki del Rey? Se puede, pero gritar más fuerte no sirve de nada.</p><p class="p">One Piece nº 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="gohan se enfada y levanta lo imposible. y tú ya tienes esa fuerza: tu cerebro no te deja usarla. figura gohan bandai">
-<a class="f" href="https://www.amazon.es/dp/B07C7ZWYRP?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-gohan-coche.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">Gohan se enfada y levanta lo imposible. Y tú ya tienes esa fuerza: tu cerebro no te deja usarla.</p><p class="p">Figura Gohan Bandai</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B07C7ZWYRP?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="usain bolt llegó a 44,7 km/h, y la ciencia dice que podríamos pasar de 60. funko rock lee">
-<a class="f" href="https://www.amazon.es/dp/B0FG4XVFJJ?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-correr-como-rock-lee.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">Usain Bolt llegó a 44,7 km/h, y la ciencia dice que podríamos pasar de 60.</p><p class="p">Funko Rock Lee</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0FG4XVFJJ?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/pGn4UWPC8Ac" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="aokiji congela el mar de un toque. y tú puedes hacerlo con una botella de agua, sin más frío. figura kuzan aokiji banpresto">
-<a class="f" href="https://www.amazon.es/dp/B0G2N796KG?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-08-aokiji.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">Aokiji congela el mar de un toque. Y tú puedes hacerlo con una botella de agua, sin más frío.</p><p class="p">Figura Kuzan Aokiji Banpresto</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0G2N796KG?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="manga" data-q="tsunade parte rocas de un puñetazo. tu hueso aguanta más de 40 veces más que el hormigón, y aun así te romperías la mano. naruto nº 01">
-<a class="f" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-07-tsunade.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Tsunade parte rocas de un puñetazo. Tu hueso aguanta más de 40 veces más que el hormigón, y aun así te romperías la mano.</p><p class="p">Naruto nº 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/StodBDv2zzU" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="manga" data-q="naruto encierra aire girando en su mano. un anillo de aire que gira apaga velas a metros. naruto nº 01">
-<a class="f" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-07-rasengan.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Naruto encierra aire girando en su mano. Un anillo de aire que gira apaga velas a metros.</p><p class="p">Naruto nº 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/LryZX59G0Vs" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="sasuke escupe fuego. los tragafuegos de verdad no lo sacan de la boca: el fuego nace en la antorcha. funko sasuke uchiha (naruto classic)">
-<a class="f" href="https://www.amazon.es/dp/B0DJRZ1QNX?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-07-katon.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">Sasuke escupe fuego. Los tragafuegos de verdad no lo sacan de la boca: el fuego nace en la antorcha.</p><p class="p">Funko Sasuke Uchiha (Naruto Classic)</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0DJRZ1QNX?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/J9seNor5Lz8" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="goku junta energía en las manos. la física sabe hacerlo: se llama plasma. funko goku con onda kamehameha">
-<a class="f" href="https://www.amazon.es/dp/B08LQ591C3?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-07-kamehameha.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">Goku junta energía en las manos. La física sabe hacerlo: se llama plasma.</p><p class="p">Funko Goku con onda Kamehameha</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B08LQ591C3?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/hzYgxmV90HU" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="manga" data-q="un golpe flojo en el pecho puede parar un corazón, si cae en 15 milésimas exactas. el cuerpo humano, bill bryson">
-<a class="f" href="https://www.amazon.es/dp/8491874801?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-07-golpe-corazon.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Un golpe flojo en el pecho puede parar un corazón, si cae en 15 milésimas exactas.</p><p class="p">El cuerpo humano, Bill Bryson</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8491874801?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/dVZzpsj-P68" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="ciencia" data-q="luffy bombea sangre con las piernas. tu cuerpo también: tus gemelos son tu segundo corazón. calcetines de compresión danish endurance">
-<a class="f" href="https://www.amazon.es/dp/B07QB3FLPZ?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-07-gear-second.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Luffy bombea sangre con las piernas. Tu cuerpo también: tus gemelos son tu segundo corazón.</p><p class="p">Calcetines de compresión Danish Endurance</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B07QB3FLPZ?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/w9lhWDAgRSg" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="manga" data-q="neji ve a través de las paredes. con partículas que caen del cielo encontraron un hueco escondido en la gran pirámide. naruto nº 01">
-<a class="f" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-07-byakugan.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Neji ve a través de las paredes. Con partículas que caen del cielo encontraron un hueco escondido en la Gran Pirámide.</p><p class="p">Naruto nº 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/LJAoNYKMZFM" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="zoro corta acero de un tajo. tu katana rebotaría, y no porque el acero sea más duro. funko roronoa zoro">
-<a class="f" href="https://www.amazon.es/dp/B08FMSC7NC?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-06-zoro.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">Zoro corta acero de un tajo. Tu katana rebotaría, y no porque el acero sea más duro.</p><p class="p">Funko Roronoa Zoro</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B08FMSC7NC?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/sGCfi2Vck9s" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="una mosca ve 250 imágenes por segundo. tú, 60: para ella, tu mano va a cámara lenta. funko itachi uchiha">
-<a class="f" href="https://www.amazon.es/dp/B0CLFNMTMV?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-06-sharingan.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">Una mosca ve 250 imágenes por segundo. Tú, 60: para ella, tu mano va a cámara lenta.</p><p class="p">Funko Itachi Uchiha</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CLFNMTMV?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="piccolo se regenera un brazo. tú no, pero tienes un órgano que vuelve a crecer aunque te quiten más de la mitad. figura piccolo tamashii daima">
-<a class="f" href="https://www.amazon.es/dp/B0D3KTT41G?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-06-piccolo.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">Piccolo se regenera un brazo. Tú no, pero tienes un órgano que vuelve a crecer aunque te quiten más de la mitad.</p><p class="p">Figura Piccolo Tamashii DAIMA</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0D3KTT41G?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/_Ony01TO1P0" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="manga" data-q="zeppeli rompe una roca a través de una rana sin hacerle nada. los médicos lo hacen cada día. jojo's bizarre adventure parte 1">
-<a class="f" href="https://www.amazon.es/dp/8417099417?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-06-hamon.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Zeppeli rompe una roca a través de una rana sin hacerle nada. Los médicos lo hacen cada día.</p><p class="p">JoJo's Bizarre Adventure parte 1</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8417099417?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/JrD99h7JX24" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="ciencia" data-q="tanjiro sopla calabazas para tener más fuerza. tu sangre ya va al 98 % de oxígeno. pulsioxímetro de dedo">
-<a class="f" href="https://www.amazon.es/dp/B08R39Y1H4?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-05-respirar.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Tanjiro sopla calabazas para tener más fuerza. Tu sangre ya va al 98 % de oxígeno.</p><p class="p">Pulsioxímetro de dedo</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B08R39Y1H4?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/XN3l7ufnFuM" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="ciencia" data-q="lo que le pasa a tu cerebro si no duermes, día a día. antifaz para dormir myhalos">
-<a class="f" href="https://www.amazon.es/dp/B09CZ68WV3?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-04-sin-dormir.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Lo que le pasa a tu cerebro si no duermes, día a día.</p><p class="p">Antifaz para dormir MyHalos</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B09CZ68WV3?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/XTSUSPADEOo" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="ciencia" data-q="existe una cueva con cristales de 11 metros, como en un mundo de fantasía. mega kit de cristales national geographic">
-<a class="f" href="https://www.amazon.es/dp/B0DTY7F7Y3?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-04-naica.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Existe una cueva con cristales de 11 metros, como en un mundo de fantasía.</p><p class="p">Mega kit de cristales National Geographic</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0DTY7F7Y3?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/iCWz0Zi8vA0" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="manga" data-q="una rana se congela cada invierno: el corazón se le para, y en primavera se va saltando. ¿qué pasaría si...?">
-<a class="f" href="https://www.amazon.es/dp/8403517297?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-03-rana.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Una rana se congela cada invierno: el corazón se le para, y en primavera se va saltando.</p><p class="p">¿Qué pasaría si...?</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8403517297?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/dg6YYaQmFbU" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="manga" data-q="hay un hombre que se estira la piel casi 16 cm, y no es por entrenar. one piece nº 01">
-<a class="f" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-03-cuerpo-de-goma.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Hay un hombre que se estira la piel casi 16 cm, y no es por entrenar.</p><p class="p">One Piece nº 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/R59UJIxAdu0" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="figuras" data-q="hay un animal al que le vuelve a crecer la pata entera, sin una sola cicatriz. peluche ajolote wild republic">
-<a class="f" href="https://www.amazon.es/dp/B0F2N6DW8D?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-02-regenerarse.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧸 Figura</span><p class="g">Hay un animal al que le vuelve a crecer la pata entera, sin una sola cicatriz.</p><p class="p">Peluche ajolote Wild Republic</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0F2N6DW8D?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/9Qf-mWjB4is" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="ciencia" data-q="tu cuerpo ya lo hace cuando te da calambre una puerta. bola de plasma">
-<a class="f" href="https://www.amazon.es/dp/B089N5HXR9?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-02-rayo-con-las-manos.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Tu cuerpo ya lo hace cuando te da calambre una puerta.</p><p class="p">Bola de plasma</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B089N5HXR9?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/66yj2tiaZ40" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="manga" data-q="los alquimistas nunca lo lograron. la física, sí: plomo convertido en oro de verdad. fullmetal alchemist kanzenban 1">
-<a class="f" href="https://www.amazon.es/dp/8467963131?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-02-oro.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Los alquimistas nunca lo lograron. La física, sí: plomo convertido en oro de verdad.</p><p class="p">Fullmetal Alchemist kanzenban 1</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8467963131?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/O3fk-11ymxQ" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="manga" data-q="hay una velocidad a la que dejas de acelerar, saltes desde donde saltes. ¿qué pasaría si...?">
-<a class="f" href="https://www.amazon.es/dp/8403517297?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-02-nubes.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Hay una velocidad a la que dejas de acelerar, saltes desde donde saltes.</p><p class="p">¿Qué pasaría si...?</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8403517297?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/Gwg9CGpViYE" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="ciencia" data-q="hay una medusa que, cuando envejece, vuelve a ser joven. lámpara de medusas led">
-<a class="f" href="https://www.amazon.es/dp/B0DC6V7HKF?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-02-medusa.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Hay una medusa que, cuando envejece, vuelve a ser joven.</p><p class="p">Lámpara de medusas LED</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0DC6V7HKF?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/4Kqish3Pi3w" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="ciencia" data-q="el agua corta acero. solo hay que dispararla el doble de rápido que una bala. kärcher k2 hidrolimpiadora">
-<a class="f" href="https://www.amazon.es/dp/B0DQ17RC2R?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-11-02-agua-corta-acero.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">El agua corta acero. Solo hay que dispararla el doble de rápido que una bala.</p><p class="p">Kärcher K2 hidrolimpiadora</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0DQ17RC2R?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="manga" data-q="un humano de 15 metros no daría miedo: se rompería con su propio peso. ataque a los titanes, ed. integral 1">
-<a class="f" href="https://www.amazon.es/dp/8467964146?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-10-31-titanes.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Un humano de 15 metros no daría miedo: se rompería con su propio peso.</p><p class="p">Ataque a los Titanes, ed. integral 1</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8467964146?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="manga" data-q="naruto lo hace con chakra. un lagarto lo hace corriendo. naruto nº 01">
-<a class="f" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-10-31-agua.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Naruto lo hace con chakra. Un lagarto lo hace corriendo.</p><p class="p">Naruto nº 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a><a class="v" href="https://www.youtube.com/shorts/o7lm8te2LIA" target="_blank" rel="noopener">▶ Vídeo</a></div></div></article>
-<article class="c" data-cat="manga" data-q="¿los tréboles de cinco hojas de black clover existen de verdad? sí, y hay uno con 63. black clover 01">
-<a class="f" href="https://www.amazon.es/dp/8467961198?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-10-30-trebol.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">¿Los tréboles de cinco hojas de Black Clover existen de verdad? Sí, y hay uno con 63.</p><p class="p">Black Clover 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8467961198?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="manga" data-q="saitama lo hace en cada capítulo. en la vida real, solo un látigo lo consigue. one punch-man 01">
-<a class="f" href="https://www.amazon.es/dp/8416604509?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-10-30-punetazo.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">📖 Manga</span><p class="g">Saitama lo hace en cada capítulo. En la vida real, solo un látigo lo consigue.</p><p class="p">One Punch-Man 01</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/8416604509?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-<article class="c" data-cat="ciencia" data-q="goku entrenaba a 100 veces la gravedad. tú no aguantarías ni unos segundos (y no por los músculos). chaleco lastrado proiron 10 kg">
-<a class="f" href="https://www.amazon.es/dp/B09QXGQNFC?tag=toanime-21" target="_blank" rel="sponsored noopener"><img src="img/2026-10-30-gravedad.jpg" alt="" loading="lazy" width="240" height="427"></a>
-<div class="t"><span class="cat">🧪 Ciencia en casa</span><p class="g">Goku entrenaba a 100 veces la gravedad. Tú no aguantarías ni unos segundos (y no por los músculos).</p><p class="p">Chaleco lastrado PROIRON 10 kg</p>
-<div class="acc"><a class="b" href="https://www.amazon.es/dp/B09QXGQNFC?tag=toanime-21" target="_blank" rel="sponsored noopener">¡LO QUIERO! →</a></div></div></article>
-</div>
-<button class="todos" id="todos">VER LOS 53 →</button>
-<p class="vacio" id="vacio">Ese aún no está… ¡pídemelo en los comentarios! 😤</p>
+<article class="c" data-cat="funkos" data-q="funko luffy gear 5 one piece funkos">
+<a class="f" href="https://www.amazon.es/dp/B0D386XLFJ?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#d62828" aria-label="Funko Luffy Gear 5"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Luffy Gear 5</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0D386XLFJ?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="manga" data-q="one piece nº 01 one piece manga">
+<a class="f" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#d62828" aria-label="One Piece nº 01"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-manga" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="p">One Piece nº 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8468471526?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/R59UJIxAdu0" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="juguetes" data-q="réplica de la fruta gomu gomu one piece juguetes">
+<a class="f" href="https://www.amazon.es/dp/B0DJFLM1GD?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#d62828" aria-label="Réplica de la Fruta Gomu Gomu"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-juguetes" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🎲 Juguetes</span><p class="p">Réplica de la Fruta Gomu Gomu</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0DJFLM1GD?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="espadas" data-q="katana de madera de zoro (sandai kitetsu) one piece espadas">
+<a class="f" href="https://www.amazon.es/dp/B096S6GHCK?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#d62828" aria-label="Katana de madera de Zoro (Sandai Kitetsu)"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-espadas" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">⚔️ Espadas</span><p class="p">Katana de madera de Zoro (Sandai Kitetsu)</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B096S6GHCK?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="cosplay" data-q="sombrero de paja oficial abystyle one piece cosplay">
+<a class="f" href="https://www.amazon.es/dp/B0G2MK8NYP?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#d62828" aria-label="Sombrero de paja oficial ABYstyle"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-cosplay" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🎭 Cosplay</span><p class="p">Sombrero de paja oficial ABYstyle</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0G2MK8NYP?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="peluches" data-q="peluche chopper 25 cm one piece peluches">
+<a class="f" href="https://www.amazon.es/dp/B0842CBRWZ?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#d62828" aria-label="Peluche Chopper 25 cm"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-peluches" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🧸 Peluches</span><p class="p">Peluche Chopper 25 cm</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0842CBRWZ?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="figura kuzan aokiji banpresto one piece figuras">
+<a class="f" href="https://www.amazon.es/dp/B0G2N796KG?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#d62828" aria-label="Figura Kuzan Aokiji Banpresto"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-figuras" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🗿 Figuras</span><p class="p">Figura Kuzan Aokiji Banpresto</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0G2N796KG?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="entrena" data-q="calcetines de compresión danish endurance one piece entrena">
+<a class="f" href="https://www.amazon.es/dp/B07QB3FLPZ?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#d62828" aria-label="Calcetines de compresión Danish Endurance"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-entrena" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">💪 Entrena</span><p class="p">Calcetines de compresión Danish Endurance</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B07QB3FLPZ?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/w9lhWDAgRSg" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="funkos" data-q="funko monkey d. luffy one piece funkos">
+<a class="f" href="https://www.amazon.es/dp/B0CVNM5L6F?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#d62828" aria-label="Funko Monkey D. Luffy"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Monkey D. Luffy</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CVNM5L6F?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="juguetes" data-q="réplica de la fruta mera mera one piece juguetes">
+<a class="f" href="https://www.amazon.es/dp/B0DJFM4CZ9?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#d62828" aria-label="Réplica de la Fruta Mera Mera"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-juguetes" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🎲 Juguetes</span><p class="p">Réplica de la Fruta Mera Mera</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0DJFM4CZ9?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="funkos" data-q="funko roronoa zoro one piece funkos">
+<a class="f" href="https://www.amazon.es/dp/B08FMSC7NC?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#d62828" aria-label="Funko Roronoa Zoro"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Roronoa Zoro</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B08FMSC7NC?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/sGCfi2Vck9s" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+</div><button class="mas-grupo">VER LOS 11 DE ONE PIECE →</button></div>
+<div class="grupo" data-anime="naruto" style="--col:#f77f00"><h3><span>NARUTO</span><small>10</small></h3>
+<div class="rejilla">
+<article class="c" data-cat="funkos" data-q="funko naruto uzumaki naruto funkos">
+<a class="f" href="https://www.amazon.es/dp/B0D4B664KV?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#f77f00" aria-label="Funko Naruto Uzumaki"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Naruto Uzumaki</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0D4B664KV?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="manga" data-q="naruto nº 01 naruto manga">
+<a class="f" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#f77f00" aria-label="Naruto nº 01"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-manga" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="p">Naruto nº 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8415821816?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/o7lm8te2LIA" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="cosplay" data-q="bandana de konoha naruto cosplay">
+<a class="f" href="https://www.amazon.es/dp/B08NGT99HG?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#f77f00" aria-label="Bandana de Konoha"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-cosplay" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🎭 Cosplay</span><p class="p">Bandana de Konoha</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B08NGT99HG?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="peluches" data-q="peluche kurama barrado naruto peluches">
+<a class="f" href="https://www.amazon.es/dp/B0GFP8FB9M?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#f77f00" aria-label="Peluche Kurama Barrado"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-peluches" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🧸 Peluches</span><p class="p">Peluche Kurama Barrado</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0GFP8FB9M?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="funkos" data-q="funko kakashi hatake naruto funkos">
+<a class="f" href="https://www.amazon.es/dp/B01M5KD9Y6?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#f77f00" aria-label="Funko Kakashi Hatake"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Kakashi Hatake</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B01M5KD9Y6?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="cosplay" data-q="capa de akatsuki naruto cosplay">
+<a class="f" href="https://www.amazon.es/dp/B09K5BXY2P?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#f77f00" aria-label="Capa de Akatsuki"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-cosplay" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🎭 Cosplay</span><p class="p">Capa de Akatsuki</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B09K5BXY2P?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="funkos" data-q="funko itachi uchiha naruto funkos">
+<a class="f" href="https://www.amazon.es/dp/B0CLFNMTMV?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#f77f00" aria-label="Funko Itachi Uchiha"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Itachi Uchiha</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CLFNMTMV?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/W92eqI4enxM" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="funkos" data-q="funko sasuke uchiha naruto funkos">
+<a class="f" href="https://www.amazon.es/dp/B0DJRZ1QNX?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#f77f00" aria-label="Funko Sasuke Uchiha"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Sasuke Uchiha</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0DJRZ1QNX?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/J9seNor5Lz8" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="funkos" data-q="funko rock lee naruto funkos">
+<a class="f" href="https://www.amazon.es/dp/B0FG4XVFJJ?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#f77f00" aria-label="Funko Rock Lee"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Rock Lee</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0FG4XVFJJ?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/pGn4UWPC8Ac" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="funkos" data-q="funko might guy ocho puertas naruto funkos">
+<a class="f" href="https://www.amazon.es/dp/B0BDY764VM?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#f77f00" aria-label="Funko Might Guy Ocho Puertas"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Might Guy Ocho Puertas</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0BDY764VM?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/EDBcCo7wEvM" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+</div><button class="mas-grupo">VER LOS 10 DE NARUTO →</button></div>
+<div class="grupo" data-anime="dragon-ball" style="--col:#ffb703"><h3><span>DRAGON BALL</span><small>10</small></h3>
+<div class="rejilla">
+<article class="c" data-cat="funkos" data-q="funko goku con kamehameha dragon ball funkos">
+<a class="f" href="https://www.amazon.es/dp/B08LQ591C3?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ffb703" aria-label="Funko Goku con Kamehameha"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Goku con Kamehameha</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B08LQ591C3?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/hzYgxmV90HU" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="figura goku super saiyan banpresto dragon ball figuras">
+<a class="f" href="https://www.amazon.es/dp/B0CXJBYKTT?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ffb703" aria-label="Figura Goku Super Saiyan Banpresto"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-figuras" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🗿 Figuras</span><p class="p">Figura Goku Super Saiyan Banpresto</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CXJBYKTT?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="manga" data-q="dragon ball ultimate nº 01 dragon ball manga">
+<a class="f" href="https://www.amazon.es/dp/8413418496?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ffb703" aria-label="Dragon Ball Ultimate nº 01"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-manga" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="p">Dragon Ball Ultimate nº 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8413418496?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="juguetes" data-q="set de las 7 bolas de dragón dragon ball juguetes">
+<a class="f" href="https://www.amazon.es/dp/B0H3KTZ32B?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ffb703" aria-label="Set de las 7 Bolas de Dragón"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-juguetes" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🎲 Juguetes</span><p class="p">Set de las 7 Bolas de Dragón</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0H3KTZ32B?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="cosplay" data-q="peluca super saiyan dragon ball cosplay">
+<a class="f" href="https://www.amazon.es/dp/B0CFRQ1MQ4?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ffb703" aria-label="Peluca Super Saiyan"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-cosplay" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">🎭 Cosplay</span><p class="p">Peluca Super Saiyan</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CFRQ1MQ4?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/Ai4RUQ_Hu6o" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="peluches" data-q="peluche goku play by play dragon ball peluches">
+<a class="f" href="https://www.amazon.es/dp/B0DFMQF38Y?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ffb703" aria-label="Peluche Goku Play by Play"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-peluches" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🧸 Peluches</span><p class="p">Peluche Goku Play by Play</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0DFMQF38Y?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="entrena" data-q="chaleco lastrado proiron 10 kg dragon ball entrena">
+<a class="f" href="https://www.amazon.es/dp/B09QXGQNFC?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ffb703" aria-label="Chaleco lastrado PROIRON 10 kg"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-entrena" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">💪 Entrena</span><p class="p">Chaleco lastrado PROIRON 10 kg</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B09QXGQNFC?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="funkos" data-q="funko majin vegeta dragon ball funkos">
+<a class="f" href="https://www.amazon.es/dp/B085PH46S7?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ffb703" aria-label="Funko Majin Vegeta"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Majin Vegeta</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B085PH46S7?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="figura gohan bandai dragon ball figuras">
+<a class="f" href="https://www.amazon.es/dp/B07C7ZWYRP?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ffb703" aria-label="Figura Gohan Bandai"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-figuras" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🗿 Figuras</span><p class="p">Figura Gohan Bandai</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B07C7ZWYRP?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="figuras" data-q="figura piccolo tamashii daima dragon ball figuras">
+<a class="f" href="https://www.amazon.es/dp/B0D3KTT41G?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ffb703" aria-label="Figura Piccolo Tamashii DAIMA"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-figuras" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">🗿 Figuras</span><p class="p">Figura Piccolo Tamashii DAIMA</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0D3KTT41G?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/_Ony01TO1P0" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+</div><button class="mas-grupo">VER LOS 10 DE DRAGON BALL →</button></div>
+<div class="grupo" data-anime="jujutsu-kaisen" style="--col:#6a3fb5"><h3><span>JUJUTSU KAISEN</span><small>5</small></h3>
+<div class="rejilla">
+<article class="c" data-cat="funkos" data-q="funko satoru gojo jujutsu kaisen funkos">
+<a class="f" href="https://www.amazon.es/dp/B09HLBVD56?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#6a3fb5" aria-label="Funko Satoru Gojo"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Satoru Gojo</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B09HLBVD56?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/ADM7Pta5Ifk" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="jujutsu kaisen 01 jujutsu kaisen manga">
+<a class="f" href="https://www.amazon.es/dp/8467961112?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#6a3fb5" aria-label="Jujutsu Kaisen 01"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-manga" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="p">Jujutsu Kaisen 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8467961112?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="funkos" data-q="funko deluxe gojo (púrpura) jujutsu kaisen funkos">
+<a class="f" href="https://www.amazon.es/dp/B0CND1H44Q?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#6a3fb5" aria-label="Funko Deluxe Gojo (Púrpura)"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Deluxe Gojo (Púrpura)</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CND1H44Q?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="funkos" data-q="funko yuji itadori jujutsu kaisen funkos">
+<a class="f" href="https://www.amazon.es/dp/B0D98SZ6BQ?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#6a3fb5" aria-label="Funko Yuji Itadori"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Yuji Itadori</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0D98SZ6BQ?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="funkos" data-q="funko deluxe sukuna jujutsu kaisen funkos">
+<a class="f" href="https://www.amazon.es/dp/B09HLD3R71?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#6a3fb5" aria-label="Funko Deluxe Sukuna"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Deluxe Sukuna</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B09HLD3R71?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+</div><button class="mas-grupo">VER LOS 5 DE JUJUTSU KAISEN →</button></div>
+<div class="grupo" data-anime="kimetsu-no-yaiba" style="--col:#2a9d8f"><h3><span>KIMETSU NO YAIBA</span><small>6</small></h3>
+<div class="rejilla">
+<article class="c" data-cat="funkos" data-q="funko tanjiro kimetsu no yaiba funkos">
+<a class="f" href="https://www.amazon.es/dp/B0CSVK84MR?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#2a9d8f" aria-label="Funko Tanjiro"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Tanjiro</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CSVK84MR?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/4Uk1amLIWBo" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="guardianes de la noche 01 kimetsu no yaiba manga">
+<a class="f" href="https://www.amazon.es/dp/8467960965?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#2a9d8f" aria-label="Guardianes de la Noche 01"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-manga" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="p">Guardianes de la Noche 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8467960965?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/eBLcNbVD5c0" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="espadas" data-q="katana de bambú para cosplay kimetsu no yaiba espadas">
+<a class="f" href="https://www.amazon.es/dp/B0G3W22TR9?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#2a9d8f" aria-label="Katana de bambú para cosplay"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-espadas" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">⚔️ Espadas</span><p class="p">Katana de bambú para cosplay</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0G3W22TR9?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="cosplay" data-q="disfraz de shinobu kocho kimetsu no yaiba cosplay">
+<a class="f" href="https://www.amazon.es/dp/B0DJR5R3LM?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#2a9d8f" aria-label="Disfraz de Shinobu Kocho"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-cosplay" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🎭 Cosplay</span><p class="p">Disfraz de Shinobu Kocho</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0DJR5R3LM?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="funkos" data-q="funko nezuko kamado kimetsu no yaiba funkos">
+<a class="f" href="https://www.amazon.es/dp/B083MCTX7F?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#2a9d8f" aria-label="Funko Nezuko Kamado"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Nezuko Kamado</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B083MCTX7F?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="funkos" data-q="funko zenitsu agatsuma kimetsu no yaiba funkos">
+<a class="f" href="https://www.amazon.es/dp/B083MCBKYQ?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#2a9d8f" aria-label="Funko Zenitsu Agatsuma"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Zenitsu Agatsuma</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B083MCBKYQ?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+</div><button class="mas-grupo">VER LOS 6 DE KIMETSU NO YAIBA →</button></div>
+<div class="grupo" data-anime="my-hero-academia" style="--col:#2b7de9"><h3><span>MY HERO ACADEMIA</span><small>3</small></h3>
+<div class="rejilla">
+<article class="c" data-cat="funkos" data-q="funko deku my hero academia funkos">
+<a class="f" href="https://www.amazon.es/dp/B0BNJYK3Z1?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#2b7de9" aria-label="Funko Deku"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Deku</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0BNJYK3Z1?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="manga" data-q="my hero academia nº 01 my hero academia manga">
+<a class="f" href="https://www.amazon.es/dp/8416693501?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#2b7de9" aria-label="My Hero Academia nº 01"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-manga" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="p">My Hero Academia nº 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8416693501?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="funkos" data-q="funko all might my hero academia funkos">
+<a class="f" href="https://www.amazon.es/dp/B07PY996T9?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#2b7de9" aria-label="Funko All Might"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko All Might</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B07PY996T9?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+</div><button class="mas-grupo">VER LOS 3 DE MY HERO ACADEMIA →</button></div>
+<div class="grupo" data-anime="pokemon" style="--col:#ffcb05"><h3><span>POKÉMON</span><small>4</small></h3>
+<div class="rejilla">
+<article class="c" data-cat="peluches" data-q="peluche pikachu 20 cm pokémon peluches">
+<a class="f" href="https://www.amazon.es/dp/B0C8QF3CFM?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ffcb05" aria-label="Peluche Pikachu 20 cm"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-peluches" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🧸 Peluches</span><p class="p">Peluche Pikachu 20 cm</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0C8QF3CFM?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="funkos" data-q="funko pikachu pokémon funkos">
+<a class="f" href="https://www.amazon.es/dp/B01MFX366P?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ffcb05" aria-label="Funko Pikachu"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Pikachu</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B01MFX366P?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="juguetes" data-q="clip 'n' go charmander y poké ball pokémon juguetes">
+<a class="f" href="https://www.amazon.es/dp/B0CTTXV5HX?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ffcb05" aria-label="Clip 'N' Go Charmander y Poké Ball"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-juguetes" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🎲 Juguetes</span><p class="p">Clip 'N' Go Charmander y Poké Ball</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0CTTXV5HX?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="juguetes" data-q="caja de entrenador élite 30 aniversario pokémon juguetes">
+<a class="f" href="https://www.amazon.es/dp/B0H8T5GC4W?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ffcb05" aria-label="Caja de Entrenador Élite 30 aniversario"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-juguetes" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🎲 Juguetes</span><p class="p">Caja de Entrenador Élite 30 aniversario</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0H8T5GC4W?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+</div><button class="mas-grupo">VER LOS 4 DE POKÉMON →</button></div>
+<div class="grupo" data-anime="ataque-a-los-titanes" style="--col:#8a6a4f"><h3><span>ATAQUE A LOS TITANES</span><small>3</small></h3>
+<div class="rejilla">
+<article class="c" data-cat="manga" data-q="ataque a los titanes, edición integral 1 ataque a los titanes manga">
+<a class="f" href="https://www.amazon.es/dp/8467964146?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#8a6a4f" aria-label="Ataque a los Titanes, edición integral 1"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-manga" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="p">Ataque a los Titanes, edición integral 1</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8467964146?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="funkos" data-q="funko levi ackerman ataque a los titanes funkos">
+<a class="f" href="https://www.amazon.es/dp/B0DNRT7FBW?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#8a6a4f" aria-label="Funko Levi Ackerman"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-funkos" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🤩 Funkos</span><p class="p">Funko Levi Ackerman</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0DNRT7FBW?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="cosplay" data-q="capa de la legión de reconocimiento ataque a los titanes cosplay">
+<a class="f" href="https://www.amazon.es/dp/B09V18DM4L?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#8a6a4f" aria-label="Capa de la Legión de Reconocimiento"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-cosplay" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🎭 Cosplay</span><p class="p">Capa de la Legión de Reconocimiento</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B09V18DM4L?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+</div><button class="mas-grupo">VER LOS 3 DE ATAQUE A LOS TITANES →</button></div>
+<div class="grupo" data-anime="mas-animes" style="--col:#ef476f"><h3><span>MÁS ANIMES</span><small>6</small></h3>
+<div class="rejilla">
+<article class="c" data-cat="manga" data-q="one punch-man 01 más animes manga">
+<a class="f" href="https://www.amazon.es/dp/8416604509?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ef476f" aria-label="One Punch-Man 01"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-manga" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="p">One Punch-Man 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8416604509?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/n78Ss6FUNyI" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="jojo's bizarre adventure parte 1 más animes manga">
+<a class="f" href="https://www.amazon.es/dp/8417099417?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ef476f" aria-label="JoJo's Bizarre Adventure parte 1"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-manga" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="p">JoJo's Bizarre Adventure parte 1</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8417099417?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/JrD99h7JX24" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="fullmetal alchemist kanzenban 1 más animes manga">
+<a class="f" href="https://www.amazon.es/dp/8467963131?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ef476f" aria-label="Fullmetal Alchemist kanzenban 1"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-manga" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="p">Fullmetal Alchemist kanzenban 1</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8467963131?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/O3fk-11ymxQ" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="manga" data-q="black clover 01 más animes manga">
+<a class="f" href="https://www.amazon.es/dp/8467961198?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ef476f" aria-label="Black Clover 01"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-manga" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="p">Black Clover 01</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8467961198?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="manga" data-q="lupin iii 1 más animes manga">
+<a class="f" href="https://www.amazon.es/dp/8491675892?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ef476f" aria-label="Lupin III 1"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-manga" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="p">Lupin III 1</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8491675892?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="manga" data-q="cells at work! vol. 1 más animes manga">
+<a class="f" href="https://www.amazon.es/dp/8416703892?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#ef476f" aria-label="Cells at Work! vol. 1"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-manga" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">📖 Manga</span><p class="p">Cells at Work! vol. 1</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8416703892?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/ISY6HVf-XHo" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+</div><button class="mas-grupo">VER LOS 6 DE MÁS ANIMES →</button></div>
+<div class="grupo" data-anime="ciencia-en-casa" style="--col:#7b5cff"><h3><span>CIENCIA EN CASA</span><small>8</small></h3>
+<div class="rejilla">
+<article class="c" data-cat="ciencia" data-q="bola de plasma ciencia en casa ciencia">
+<a class="f" href="https://www.amazon.es/dp/B089N5HXR9?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#7b5cff" aria-label="Bola de plasma"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-ciencia" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🧪 Ciencia</span><p class="p">Bola de plasma</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B089N5HXR9?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="peluches" data-q="peluche ajolote wild republic ciencia en casa peluches">
+<a class="f" href="https://www.amazon.es/dp/B0F2N6DW8D?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#7b5cff" aria-label="Peluche ajolote Wild Republic"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-peluches" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">🧸 Peluches</span><p class="p">Peluche ajolote Wild Republic</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0F2N6DW8D?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/9Qf-mWjB4is" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="mega kit de cristales national geographic ciencia en casa ciencia">
+<a class="f" href="https://www.amazon.es/dp/B0DTY7F7Y3?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#7b5cff" aria-label="Mega kit de cristales National Geographic"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-ciencia" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">🧪 Ciencia</span><p class="p">Mega kit de cristales National Geographic</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0DTY7F7Y3?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/iCWz0Zi8vA0" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="maceta bonsái que levita con imanes ciencia en casa ciencia">
+<a class="f" href="https://www.amazon.es/dp/B08MCHT1FG?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#7b5cff" aria-label="Maceta bonsái que levita con imanes"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-ciencia" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg></a>
+<div class="t"><span class="cat">🧪 Ciencia</span><p class="p">Maceta bonsái que levita con imanes</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B08MCHT1FG?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="lámpara de medusas led ciencia en casa ciencia">
+<a class="f" href="https://www.amazon.es/dp/B0DC6V7HKF?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#7b5cff" aria-label="Lámpara de medusas LED"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-ciencia" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">🧪 Ciencia</span><p class="p">Lámpara de medusas LED</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B0DC6V7HKF?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/4Kqish3Pi3w" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="¿qué pasaría si...? ciencia en casa ciencia">
+<a class="f" href="https://www.amazon.es/dp/8403517297?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#7b5cff" aria-label="¿Qué pasaría si...?"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-ciencia" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">🧪 Ciencia</span><p class="p">¿Qué pasaría si...?</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8403517297?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/Gwg9CGpViYE" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="el cuerpo humano, bill bryson ciencia en casa ciencia">
+<a class="f" href="https://www.amazon.es/dp/8491874801?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#7b5cff" aria-label="El cuerpo humano, Bill Bryson"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-ciencia" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">🧪 Ciencia</span><p class="p">El cuerpo humano, Bill Bryson</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/8491874801?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/dVZzpsj-P68" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+<article class="c" data-cat="ciencia" data-q="pulsioxímetro de dedo ciencia en casa ciencia">
+<a class="f" href="https://www.amazon.es/dp/B08R39Y1H4?tag=toanime-21" target="_blank" rel="sponsored noopener" style="--col:#7b5cff" aria-label="Pulsioxímetro de dedo"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="var(--col)"/><rect width="100" height="100" fill="url(#rayos)"/><rect width="100" height="100" fill="url(#puntos)"/><use href="#i-ciencia" x="14" y="12" width="72" height="72" style="color:color-mix(in srgb,var(--col) 55%,#111)"/></svg><span class="env">▶ EN EL VÍDEO</span></a>
+<div class="t"><span class="cat">🧪 Ciencia</span><p class="p">Pulsioxímetro de dedo</p>
+<div class="acc"><a class="b" href="https://www.amazon.es/dp/B08R39Y1H4?tag=toanime-21" target="_blank" rel="sponsored noopener">VER EN AMAZON</a><a class="v" href="https://www.youtube.com/shorts/XN3l7ufnFuM" target="_blank" rel="noopener">▶ Ver el vídeo</a></div></div></article>
+</div><button class="mas-grupo">VER LOS 8 DE CIENCIA EN CASA →</button></div>
+<p class="vacio" id="vacio">Eso aún no está… ¡pídemelo en los comentarios! 😤</p>
 </section>
 
 <section id="videos"><h2>ÚLTIMOS VÍDEOS</h2><p class="sub">¿Te perdiste alguno? Aquí los tienes.</p>
 <div class="tira">
+<a class="vid" href="https://www.youtube.com/shorts/W92eqI4enxM" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-13-genjutsu-itachi.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">¿Puedes meter a alguien en un genjutsu como Itachi? Con una mano de goma y dos pinceles, sí.</span></a>
 <a class="vid" href="https://www.youtube.com/shorts/4Uk1amLIWBo" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-12-respiracion-del-agua.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">Mete la cara en agua fría y tu corazón late más despacio: es tu propio modo agua.</span></a>
 <a class="vid" href="https://www.youtube.com/shorts/Ai4RUQ_Hu6o" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-12-pelo-super-saiyan.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">Frota un globo en tu pelo y cada pelo se aparta de los demás. No es magia: es la misma chispa del pomo.</span></a>
 <a class="vid" href="https://www.youtube.com/shorts/CDooXK6JpDI" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-11-haki-observacion.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">Hay quien va en bici sin ver nada, guiándose solo por el eco de sus chasquidos.</span></a>
@@ -381,7 +475,6 @@ footer a{color:var(--amarillo)}
 <a class="vid" href="https://www.youtube.com/shorts/ISY6HVf-XHo" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-10-celulas.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">Mientras ves este reel te mueren casi 4 millones de células cada segundo, y no lo notas.</span></a>
 <a class="vid" href="https://www.youtube.com/shorts/xINkpr9fpiA" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-10-avatar-grito.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">¿Por qué en Dragon Ball gritan al transformarse? Porque gritando aprietas un 7 % más fuerte, y tú ya lo haces.</span></a>
 <a class="vid" href="https://www.youtube.com/shorts/eBLcNbVD5c0" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-08-zenitsu.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">Nueve de cada diez personas a las que les cae un rayo sobreviven.</span></a>
-<a class="vid" href="https://www.youtube.com/shorts/FLT3po2smow" target="_blank" rel="noopener"><span class="play">▶</span><img src="img/2026-11-08-tekkai.jpg" alt="" loading="lazy" width="240" height="427"><span class="vg">El Tekkai de Lucci existe, y no es músculo ni metal: es un líquido que tienes en la cocina.</span></a>
 </div>
 <a class="mas" href="https://www.youtube.com/@To_Anime-1/shorts" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15V9l5.8 3z"/></svg> VER TODOS EN YOUTUBE</a>
 </section>
@@ -404,12 +497,16 @@ footer a{color:var(--amarillo)}
 Como afiliado de Amazon, gano una comisión por las compras que cumplan los requisitos. A ti no te cuesta más y me ayudas a seguir haciendo vídeos 💛<br>© ToAnime</footer>
 </div>
 <script>
-const q=document.getElementById('q'),cs=[...document.querySelectorAll('.c')];let f='';
-const MAX=12,bt=document.getElementById('todos');let todo=false;
-function filtra(){const t=q.value.toLowerCase().trim(),lim=!todo&&!t&&!f;let n=0;cs.forEach(c=>{const ok=(!f||c.dataset.cat===f)&&c.dataset.q.includes(t);c.style.display=ok&&(!lim||n<MAX)?'':'none';n+=ok});document.getElementById('vacio').style.display=n?'none':'block';bt.style.display=lim&&n>MAX?'':'none'}
-bt.onclick=()=>{todo=true;filtra()};filtra();
+const q=document.getElementById('q'),gs=[...document.querySelectorAll('.grupo')];let a='',f='';const MAX=()=>innerWidth>=1080?5:4;
+function filtra(){const t=q.value.toLowerCase().trim(),lim=!a&&!f&&!t;let tot=0;
+ gs.forEach(g=>{let n=0;const cs=[...g.querySelectorAll('.c')];cs.forEach(c=>{const ok=(!a||g.dataset.anime===a)&&(!f||c.dataset.cat===f)&&c.dataset.q.includes(t);
+  c.style.display=ok&&(!lim||g.abierto||n<MAX())?'':'none';n+=ok});g.style.display=n?'':'none';tot+=n;
+  g.querySelector('.mas-grupo').style.display=lim&&!g.abierto&&n>MAX()?'':'none'});
+ document.getElementById('vacio').style.display=tot?'none':'block'}
+gs.forEach(g=>g.querySelector('.mas-grupo').onclick=()=>{g.abierto=true;filtra()});
 q.addEventListener('input',filtra);
-document.querySelectorAll('.chips button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.chips button').forEach(x=>x.classList.remove('on'));b.classList.add('on');f=b.dataset.f;filtra()});
+const sel=(cl,fn)=>document.querySelectorAll(cl+' button').forEach(b=>b.onclick=()=>{document.querySelectorAll(cl+' button').forEach(x=>x.classList.remove('on'));b.classList.add('on');fn(b);filtra()});
+sel('.pestanas',b=>a=b.dataset.a);sel('.chips',b=>f=b.dataset.f);filtra();
 const ls=[...document.querySelectorAll('nav ul a')],ss=ls.map(a=>document.querySelector(a.getAttribute('href')));
 addEventListener('scroll',()=>{let i=-1;ss.forEach((s,k)=>{if(s.getBoundingClientRect().top<120)i=k});ls.forEach((a,k)=>a.classList.toggle('on',k===i))},{passive:true});
 </script>
